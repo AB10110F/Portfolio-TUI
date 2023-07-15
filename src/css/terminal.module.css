@@ -1,0 +1,83 @@
+.terminal 
+{
+    height: 400px;
+    width: 55%;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    box-sizing: border-box;
+    font-size: 15px;
+    overflow-y:auto;
+    overflow-x: hidden;
+    border: 1px solid rgb(26, 26, 26);
+}
+
+.windowOptions
+{
+    display: flex;
+    justify-content: end;
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+    align-items: center;
+    font-size: 15px;
+    position: sticky;
+    top: 0;
+}
+.windowOptions svg
+{
+    width: 25px;
+    height: 30px;
+    padding: 0 10px; 
+    color: rgb(142, 142, 142);
+}
+.windowOptions svg:nth-last-child(1):hover
+{
+    background-color: red;
+}
+
+.windowOptions svg:hover
+{
+    background-color: rgb(177, 177, 177);
+    color: white;
+}
+
+.windowOptions article
+{
+    width: 110px;
+    display: flex;
+}
+
+.terminal::-webkit-scrollbar{height: 10px; width: 8px;}
+.terminal::-webkit-scrollbar-thumb{background:#878787; border-radius: 50px;}
+
+.history
+{
+    padding: 0 10px; 
+    /* white-space: pre-wrap;
+    word-wrap: break-word; */
+    width: 100%;
+    color: rgb(214, 214, 214);
+}
+
+.prompt
+{
+    padding: 0 10px;
+}
+
+.promptDown
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.prompt svg{width: 15px;}
+
+.prompt input
+{
+    border: none;
+    outline: none;
+    width: 80%;
+    background-color: transparent;
+    color: white;
+    /* margin-top: 10px */;
+    font-size: 15px;
+}

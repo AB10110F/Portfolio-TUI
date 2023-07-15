@@ -1,6 +1,7 @@
-import './globals.css'
+/* import './globals.css'*/
 import { Inter } from 'next/font/google'
-
+import  Terminal  from '@/components/Terminal'
+import  Dots  from '@/components/Dots'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -16,6 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Terminal/>
+        <Dots/>
         {children}
       </body>
     </html>
