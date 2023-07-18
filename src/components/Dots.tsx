@@ -8,17 +8,22 @@ const Dots = () => {
 
   useEffect(() => {
     const dotSize:number = 4;
-    const spacing:number = dotSize * 16;
+    const spacing:number = dotSize * 8;
     const minTvalue:number = 50;
-    const areaAffected:number = 80;
+    const areaAffected:number = 50;
     let mouseIsMoving:boolean = false;
     let dots:any[] = [];
 
     const sketch = (p: p5) => {
+
+      p.disableFriendlyErrors = true;
+
       p.setup = () => {
-        p.createCanvas(p.windowWidth, document.documentElement.scrollHeight);
-        for (let i = 0; i < p.width; i += spacing) {
-          for (let j = 0; j < p.height; j += spacing) {
+        p.createCanvas(p.windowWidth, p.windowHeight);
+        for (let i = 0; i < p.width; i += spacing) 
+        {
+          for (let j = 0; j < p.height; j += spacing) 
+          {
             let dot = new Dot(i + spacing / 2, j + spacing / 2, dotSize);
             dots.push(dot);
           }

@@ -2,13 +2,13 @@
 {
     height: 400px;
     width: 70%;
-    background-color: rgb(26, 26, 26);
+    background-color: rgb(39, 39, 39);
     color: white;
     box-sizing: border-box;
     font-size: 15px;
     overflow-y:auto;
     overflow-x: hidden;
-    border: 1px solid rgb(117, 117, 117);
+    border: 1px solid rgb(113, 113, 113);
 }
 
 .windowOptions
