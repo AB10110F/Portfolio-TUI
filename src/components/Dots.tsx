@@ -1,21 +1,22 @@
 "use client"
 import React, { useEffect, useRef } from 'react';
 import p5 from 'p5';
+import styles from '../css/dots.module.css'
 
 const Dots = () => {
   const sketchRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const dotSize:number = 4;
-    const spacing:number = dotSize * 8;
-    const minTvalue:number = 40;
-    const areaAffected:number = 60;
+    const spacing:number = dotSize * 16;
+    const minTvalue:number = 50;
+    const areaAffected:number = 80;
     let mouseIsMoving:boolean = false;
     let dots:any[] = [];
 
     const sketch = (p: p5) => {
       p.setup = () => {
-        p.createCanvas(p.windowWidth, 400);
+        p.createCanvas(p.windowWidth, document.documentElement.scrollHeight);
         for (let i = 0; i < p.width; i += spacing) {
           for (let j = 0; j < p.height; j += spacing) {
             let dot = new Dot(i + spacing / 2, j + spacing / 2, dotSize);
@@ -79,7 +80,7 @@ const Dots = () => {
     new p5(sketch, sketchRef.current as HTMLElement);
   }, []);
 
-  return <div ref={sketchRef} />;
+  return <div className={styles.background} ref={sketchRef} />;
 };
 
 export default Dots;
