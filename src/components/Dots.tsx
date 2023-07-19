@@ -7,12 +7,12 @@ const Dots = () => {
   const sketchRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const dotSize:number = 4;
-    const spacing:number = dotSize * 10;
-    const minTvalue:number = 50;
-    const areaAffected:number = 50;
-    let mouseIsMoving:boolean = false;
-    let dots:any[] = [];
+    let dotSize: number = 4;
+    let spacing: number = dotSize * 10;
+    let minTvalue: number = 50;
+    let areaAffected: number = 50;
+    let mouseIsMoving: boolean = false;
+    let dots: Dot[] = [];
 
     const sketch = (p: p5) => {
 
@@ -20,14 +20,7 @@ const Dots = () => {
 
       p.setup = () => {
         p.createCanvas(p.windowWidth, p.windowHeight);
-        for (let i = 0; i < p.width; i += spacing) 
-        {
-          for (let j = 0; j < p.height; j += spacing) 
-          {
-            let dot = new Dot(i + spacing / 2, j + spacing / 2, dotSize);
-            dots.push(dot);
-          }
-        }
+        createDots();
       };
 
       p.draw = () => {
@@ -43,6 +36,23 @@ const Dots = () => {
         setTimeout(() => {
           mouseIsMoving = false;
         }, 100);
+      };
+
+      p.windowResized = () => {
+        p.resizeCanvas(p.windowWidth, p.windowHeight);
+        createDots();
+      };
+
+      const createDots = () => {
+        dots = [];
+        for (let i = 0; i < p.width; i += spacing) 
+        {
+          for (let j = 0; j < p.height; j += spacing) 
+          {
+            let dot = new Dot(i + spacing / 2, j + spacing / 2, dotSize);
+            dots.push(dot);
+          }
+        }
       };
     };
 
@@ -69,9 +79,13 @@ const Dots = () => {
         let distance = Math.sqrt(
           Math.pow(mouseX - this.x, 2) + Math.pow(mouseY - this.y, 2)
         );
-        if (mouseIsMoving && distance < areaAffected) {
+        
+        if (mouseIsMoving && distance < areaAffected) 
+        {
           this.transparency = 255;
-        } else {
+        } 
+        else 
+        {
           this.transparency = Math.max(minTvalue, this.transparency - 10);
         }
       }
