@@ -18,8 +18,8 @@ const Terminal = () => {
         "",
         "You can also check my social media:",
         "",
-        "GitHub: AB10110F                   CodePen: AB10110F",
-        "Twitter: AB10110F                  Reddit: AB10110F",
+        "GitHub                   CodePen",
+        "Twitter                  Reddit",
         "",
         "Type \"help\" to view the available commands"       
     ]
@@ -34,11 +34,11 @@ const Terminal = () => {
     ]
 
     const skills = [
-        "CSS          [██████████████████▁▁▁▁▁▁]              C++          [████████████████████▁▁▁▁]",
+        "CSS          [██████████████████▁▁▁▁▁▁]           C++          [████████████████████▁▁▁▁]",
         "",
-        "Typescript   [█████████████▁▁▁▁▁▁▁▁▁▁]              PHP          [██████████████▁▁▁▁▁▁▁▁▁]",
+        "Typescript   [█████████████▁▁▁▁▁▁▁▁▁▁]           PHP          [██████████████▁▁▁▁▁▁▁▁▁]",
         "",
-        "React        [███████████▁▁▁▁▁▁▁▁▁▁▁▁]              Git          [██████████████████▁▁▁▁▁▁]",
+        "React        [███████████▁▁▁▁▁▁▁▁▁▁▁▁]           Git          [██████████████████▁▁▁▁▁▁]",
 
     ]
 

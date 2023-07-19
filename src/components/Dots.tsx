@@ -8,7 +8,7 @@ const Dots = () => {
 
   useEffect(() => {
     const dotSize:number = 4;
-    const spacing:number = dotSize * 8;
+    const spacing:number = dotSize * 10;
     const minTvalue:number = 50;
     const areaAffected:number = 50;
     let mouseIsMoving:boolean = false;
