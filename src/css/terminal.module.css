@@ -1,8 +1,8 @@
 .windowContainer
 {
-    width: 800px;
+    width: 50%;
     box-sizing: border-box;
-    animation: bottom 2s ease;
+    animation: bottom 1s ease;
 }
 .terminal 
 {
@@ -19,6 +19,7 @@
     0%{
         transform: translateY(500px);
         opacity: 0%;
+        filter: blur(5px);
     }
     75%{
         transform: translateY(-10px);
@@ -37,8 +38,6 @@
     height: 30px;
     align-items: center;
     font-size: 15px;
-    position: sticky;
-    top: 0;
 }
 .windowOptions svg
 {
