@@ -65,7 +65,7 @@ const Terminal = () => {
     }, [output]);
     
     return (
-        <div  ref={preRef} className={styles.terminal}>
+        <div className={styles.windowContainer}>
             <section className={styles.windowOptions}>
                 <article>
                     <Minus />
@@ -73,48 +73,50 @@ const Terminal = () => {
                     <X />
                 </article>
             </section>
-            {<pre className={styles.history}>{output}</pre>}
-            {/* <pre style={{ color: 'green' }}>{output}</pre>*/}
-            <section className={styles.prompt}>
-                <article>@guest from portfolio</article>
-                <article className={styles.promptDown}>
-                    <ChevronRight />
-                    <input 
-                        type="text" 
-                        value={input} 
-                        onChange={e=>setInput(e.target.value)}
-                        onKeyDown={e=>{
-                            let newOutput = "";
-                            if (e.key === "Enter")
-                            {
-                                newOutput = output + "\n\n@guest from portfolio\n" + "> " + input + "\n\n";
-                                switch (input)
+            <div  ref={preRef} className={styles.terminal}>
+                {<pre className={styles.history}>{output}</pre>}
+                {/* <pre style={{ color: 'green' }}>{output}</pre>*/}
+                <section className={styles.prompt}>
+                    <article>@guest from portfolio</article>
+                    <article className={styles.promptDown}>
+                        <ChevronRight />
+                        <input 
+                            type="text" 
+                            value={input} 
+                            onChange={e=>setInput(e.target.value)}
+                            onKeyDown={e=>{
+                                let newOutput = "";
+                                if (e.key === "Enter")
                                 {
-                                    case "banner":
-                                        newOutput += banner.join('\n')
-                                        break;
-                                    case "help":
-                                        newOutput += help.join('\n')
-                                        break;
-                                    case "skills":
-                                        newOutput += skills.join('\n')
-                                        break;
-                                    case "info":
-                                        newOutput += info.join('\n')
-                                        break;
-                                    case "cls":
-                                        newOutput = ""
-                                        break;
-                                    default:
-                                        newOutput += "x_x Syntax Error \"" + input + "\" is not a command"
+                                    newOutput = output + "\n\n@guest from portfolio\n" + "> " + input + "\n\n";
+                                    switch (input)
+                                    {
+                                        case "banner":
+                                            newOutput += banner.join('\n')
+                                            break;
+                                        case "help":
+                                            newOutput += help.join('\n')
+                                            break;
+                                        case "skills":
+                                            newOutput += skills.join('\n')
+                                            break;
+                                        case "info":
+                                            newOutput += info.join('\n')
+                                            break;
+                                        case "cls":
+                                            newOutput = ""
+                                            break;
+                                        default:
+                                            newOutput += "x_x Syntax Error \"" + input + "\" is not a command"
+                                    }
+                                    setOutput(newOutput)
+                                    setInput("")
                                 }
-                                setOutput(newOutput)
-                                setInput("")
-                            }
-                        }}
-                    />
-                </article>
-            </section>
+                            }}
+                        />
+                    </article>
+                </section>
+            </div>
         </div>
     )
 };

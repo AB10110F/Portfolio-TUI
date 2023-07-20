@@ -1,15 +1,33 @@
+.windowContainer
+{
+    width: 800px;
+    box-sizing: border-box;
+    animation: bottom 2s ease;
+}
 .terminal 
 {
     height: 400px;
-    width: 800px;
+    overflow-Y:auto;
+    overflow-X:hidden;
     background-color: rgb(31, 31, 31);
     color: white;
-    box-sizing: border-box;
     font-size: 15px;
-    overflow-y:auto;
-    overflow-x: hidden;
     border: 1px solid rgb(113, 113, 113);
 }
+
+@keyframes bottom{
+    0%{
+        transform: translateY(500px);
+        opacity: 0%;
+    }
+    75%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100%;
+    }
+  }
 
 .windowOptions
 {
@@ -55,7 +73,7 @@
     /* white-space: pre-wrap;
     word-wrap: break-word; */
     width: 100%;
-    color: rgb(214, 214, 214);
+    color: white;
 }
 
 .prompt

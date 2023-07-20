@@ -7,3 +7,63 @@
   font-size: 50px;
   color: white;
 }
+
+.projects
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.windowContainer
+{
+  width: 280px;
+  background-color: rgb(31, 31, 31);
+  border: 1px solid rgb(113, 113, 113);
+}
+
+.windowOptions
+{
+    display: flex;
+    justify-content: end;
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+    align-items: center;
+    font-size: 15px;
+    position: sticky;
+    top: 0;
+}
+.windowOptions svg
+{
+    width: 25px;
+    height: 30px;
+    padding: 0 10px; 
+    color: rgb(142, 142, 142);
+}
+.windowOptions svg:nth-last-child(1):hover
+{
+    background-color: red;
+}
+
+.windowOptions svg:hover
+{
+    background-color: rgb(177, 177, 177);
+    color: white;
+}
+
+.windowOptions article
+{
+    width: 110px;
+    display: flex;
+}
+
+.windowContent
+{
+    font-size: 15px;
+    color: rgb(114, 114, 114);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+}
