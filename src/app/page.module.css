@@ -12,6 +12,26 @@
   font-size: 100px;
 }
 
+.home
+{
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.canvasContainer
+{
+  width: 380px;
+  background-color: rgb(31, 31, 31);
+  border: 1px solid rgb(113, 113, 113);
+}
+
+.canvasContent
+{
+  height: 180px;
+}
+
 .projects
 {
   display: flex;
