@@ -13,55 +13,16 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Typewriter text={'  Front-End Developer'}/> {/* TODO What is wrong with the position 1? */}
-        <div className={styles.home}>
+      <div className={styles.grid}>
             <Terminal/>
-            <div className={styles.canvasContainer}>
-                <section className={styles.windowOptions}>
-                    <article>
-                        <Minus />
-                        <Square />
-                        <X />
-                    </article>
-                </section>
-                <section className={styles.canvasContent}>
+            <section className={styles.column}>
+                <article className={styles.canvas}>
                     <Model/>
-                </section>    
-            </div>
-        </div>
-      <h1 className={dotFont.className}>Projects</h1>
-      <div className={styles.projects}>
-          <div className={styles.windowContainer}>
-              <section className={styles.windowOptions}>
-                  <article>
-                      <Minus />
-                      <Square />
-                      <X />
-                  </article>
-              </section>
-              <section className={styles.windowContent}>404</section>
-          </div>
-          <div className={styles.windowContainer}>
-              <section className={styles.windowOptions}>
-                  <article>
-                      <Minus />
-                      <Square />
-                      <X />
-                  </article>
-              </section>
-              <section className={styles.windowContent}>404</section>
-          </div>
-          <div className={styles.windowContainer}>
-              <section className={styles.windowOptions}>
-                  <article>
-                      <Minus />
-                      <Square />
-                      <X />
-                  </article>
-              </section>
-              <section className={styles.windowContent}>404</section>
-          </div>
+                </article>
+                <article className={styles.bars}></article>
+                <article className={styles.controls}>hi</article>
+            </section>
       </div>
-      <h1 className={dotFont.className}>Social Media</h1>
     </main>
   )
 }

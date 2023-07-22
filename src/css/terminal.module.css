@@ -1,15 +1,10 @@
-.windowContainer
-{
-    width: 60%;
-    box-sizing: border-box;
-    animation: bottom 1s ease;
-}
 .terminal 
 {
-    height: 400px;
+    animation: bottom 1s ease;
+    box-sizing: border-box;
+    width: 65%;
     overflow-Y:auto;
     overflow-X:hidden;
-    background-color: rgb(31, 31, 31);
     color: white;
     font-size: 15px;
     border: 1px solid rgb(113, 113, 113);
@@ -29,39 +24,6 @@
         opacity: 100%;
     }
   }
-
-.windowOptions
-{
-    display: flex;
-    justify-content: end;
-    background-color: rgb(255, 255, 255);
-    height: 30px;
-    align-items: center;
-    font-size: 15px;
-}
-.windowOptions svg
-{
-    width: 25px;
-    height: 30px;
-    padding: 0 10px; 
-    color: rgb(142, 142, 142);
-}
-.windowOptions svg:nth-last-child(1):hover
-{
-    background-color: red;
-}
-
-.windowOptions svg:hover
-{
-    background-color: rgb(177, 177, 177);
-    color: white;
-}
-
-.windowOptions article
-{
-    width: 110px;
-    display: flex;
-}
 
 .terminal::-webkit-scrollbar{height: 10px; width: 8px;}
 .terminal::-webkit-scrollbar-thumb{background:#878787; border-radius: 50px;}

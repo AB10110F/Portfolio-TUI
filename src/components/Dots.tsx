@@ -4,7 +4,7 @@ import p5 from 'p5';
 import styles from '../css/dots.module.css'
 
 const Dots = () => {
-  const sketchRef = useRef<HTMLDivElement>(null);
+  const sketchRef = useRef<HTMLDivElement>(null!);
 
   useEffect(() => {
     let dotSize: number = 4;

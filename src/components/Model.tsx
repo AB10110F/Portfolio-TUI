@@ -9,10 +9,10 @@ const AsciiCube = () => {
   
     useEffect(() => {
       const canvas = canvasRef.current;
-      const renderer = new THREE.WebGLRenderer({ canvas });
+      const renderer = new THREE.WebGLRenderer({ canvas/* , alpha: true  */});
   
       const width = 380;
-      const height = 400;
+      const height = 170;
   
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
@@ -29,7 +29,7 @@ const AsciiCube = () => {
       camera.position.z = 5;
   
       const geometry = new THREE.BoxGeometry(1, 1, 1);
-      const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+      const material = new THREE.MeshBasicMaterial({ color: 0xffffff, /* transparent:true  */});
       const cube = new THREE.Mesh(geometry, material);
       scene.add(cube);
   

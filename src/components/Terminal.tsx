@@ -2,12 +2,11 @@
 import React from 'react';
 import { useState, useRef, useEffect } from 'react';
 import styles from '../css/terminal.module.css'
-import { ChevronRight, X, Minus, Square } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 
 const Terminal = () => {
 
-    
     const banner = [
         "██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗ ",
         "██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝ ",
@@ -65,14 +64,6 @@ const Terminal = () => {
     }, [output]);
     
     return (
-        <div className={styles.windowContainer}>
-            <section className={styles.windowOptions}>
-                <article>
-                    <Minus />
-                    <Square />
-                    <X />
-                </article>
-            </section>
             <div  ref={preRef} className={styles.terminal}>
                 {<pre className={styles.history}>{output}</pre>}
                 {/* <pre style={{ color: 'green' }}>{output}</pre>*/}
@@ -117,7 +108,6 @@ const Terminal = () => {
                     </article>
                 </section>
             </div>
-        </div>
     )
 };
 
