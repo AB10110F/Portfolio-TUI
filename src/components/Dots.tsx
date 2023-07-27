@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import React, { useEffect, useRef } from 'react';
 import p5 from 'p5';
-import styles from '../css/dots.module.css'
+import styles from '../css/dots.module.css';
 
 const Dots = () => {
   const sketchRef = useRef<HTMLDivElement>(null!);

@@ -1,20 +1,20 @@
 .terminal 
 {
     animation: bottom 1s ease;
-    box-sizing: border-box;
     width: 65%;
     overflow-Y:auto;
     overflow-X:hidden;
     color: white;
-    font-size: 15px;
-    border: 1px solid rgb(113, 113, 113);
+    font-size: 2.5vh;
+    border: 2px solid rgb(255, 255, 255);
 }
 
-@keyframes bottom{
+@keyframes bottom
+{
     0%{
         transform: translateY(500px);
         opacity: 0%;
-        filter: blur(5px);
+        filter: blur(2px);
     }
     75%{
         transform: translateY(-10px);
@@ -23,14 +23,14 @@
         transform: translateY(0);
         opacity: 100%;
     }
-  }
+}
 
 .terminal::-webkit-scrollbar{height: 10px; width: 8px;}
 .terminal::-webkit-scrollbar-thumb{background:#878787; border-radius: 50px;}
 
 .history
 {
-    padding: 0 10px; 
+    padding: 15px;
     /* white-space: pre-wrap;
     word-wrap: break-word; */
     width: 100%;
@@ -39,7 +39,7 @@
 
 .prompt
 {
-    padding: 0 10px;
+    padding: 0 15px 15px 15px;
 }
 
 .promptDown
@@ -48,15 +48,36 @@
     flex-direction: row;
 }
 
-.prompt svg{width: 15px;}
+.prompt svg{width: 2.5vh;}
 
 .prompt input
 {
     border: none;
     outline: none;
-    width: 80%;
+    width: 100%;
     background-color: transparent;
     color: white;
     /* margin-top: 10px */;
-    font-size: 15px;
+    font-size: 2.5vh;
+}
+
+@media only screen and (max-width: 1250px)
+{
+    .terminal
+    {
+        font-size: 1.8vw;
+    }
+    .prompt input
+    {
+        font-size: 1.8vw;
+    }
+}
+
+@media only screen and (max-width: 760px)
+{
+    .terminal
+    {
+        height: 400%;
+        width: 100%;
+    }
 }

@@ -1,6 +1,5 @@
-"use client"
 import React, {useState, useEffect, useRef} from 'react';
-import localFont from 'next/font/local'
+import localFont from 'next/font/local';
 
 const dotFont = localFont({ src: '../app/e-dot-digital-7.ttf' })
 
