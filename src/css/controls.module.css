@@ -2,9 +2,10 @@
 {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
+    width: 30%;
 }
 
 .checkbox
@@ -27,4 +28,12 @@
     0 0 60px 20px #fff,  /* inner white */
     0 0 100px 25px #f0f, /* middle magenta */
     0 0 140px 30px #0ff; /* outer cyan */
+}
+
+@media only screen and (max-width: 760px)
+{
+     .container
+     {
+        width: 50%;
+     }
 }

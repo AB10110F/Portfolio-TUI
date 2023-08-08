@@ -1,17 +1,27 @@
 "use client";
+import React, {useState} from 'react';
 import styles from '../css/page.module.css';
 import  Terminal  from '@/components/Terminal';
 import Typewriter from '@/components/Typewriter';
 import Model from '@/components/Model';
-import Controls from '@/components/Controls'
-import localFont from 'next/font/local';
+import Controls from '@/components/Controls';
+import Image from 'next/image'
 
-const dotFont = localFont({ src: './e-dot-digital-7.ttf' })
+var enableCrt:boolean = true;
 
 export default function Home() {
+
+  const [currentCrt, setCrt] = useState(false)
+  var scanlines = currentCrt ? styles.scanlines : styles.hidden;
+  var scanner = currentCrt ? styles.scanner : styles.hidden;
+  var bright = currentCrt ? styles.bright : styles.main;
+
+
   return (
-    <main className={styles.main}>
-      <Typewriter text={'  Front-End Developer'}/> {/* TODO What is wrong with the position 1? */}
+    <main className={bright}>
+      <span className={scanner}></span>
+      <Image src="/scanlines.jpg" width={500} height={500} className={scanlines} alt="image" />
+      <Typewriter text={'F ront-End Developer'}/> {/* TODO What is wrong with the position 1? */}
       <div className={styles.grid}>
             <Terminal/>
             <section className={styles.column}>
@@ -20,7 +30,7 @@ export default function Home() {
                 </article>
                 <article className={styles.bars}></article>
                 <article className={styles.controls}>
-                    <Controls/>
+                    <Controls changeState={(currentCrt) => setCrt(currentCrt)} />
                 </article>
             </section>
       </div>

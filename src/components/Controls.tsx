@@ -1,18 +1,30 @@
-import React, {useState, useEffect, useRef} from 'react';
-import localFont from 'next/font/local';
+import React, { useState } from 'react';
 import styles from '../css/controls.module.css';
 
-const dotFont = localFont({ src: '../app/e-dot-digital-7.ttf' })
+interface ControlsProps {
+  changeState: (newValue: boolean) => void;
+}
 
-const Controls = () => {
+const Controls: React.FC<ControlsProps> = ({ changeState }) => {
+  const [crt, setCrt] = useState(false);
 
-    return (
-      <section className={styles.container}>
-          <input className={styles.checkbox} type="checkbox" />
-          <input className={styles.checkbox} type="checkbox" />
-          <input className={styles.checkbox} type="checkbox" />
-      </section>
-    )
+  const handleChange = () => {
+    const newValue = !crt;
+    setCrt(newValue);
+    changeState(newValue);
+  };
+
+  return (
+    <section className={styles.container}>
+      <input
+        className={styles.checkbox}
+        type="checkbox"
+        checked={crt}
+        onChange={handleChange}
+      />
+      <label htmlFor="">CRT Controls</label>
+    </section>
+  );
 };
 
 export default Controls;
