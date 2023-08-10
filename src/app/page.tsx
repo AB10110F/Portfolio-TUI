@@ -7,8 +7,6 @@ import Model from '@/components/Model';
 import Controls from '@/components/Controls';
 import Image from 'next/image'
 
-var enableCrt:boolean = true;
-
 export default function Home() {
 
   const [currentCrt, setCrt] = useState(false)

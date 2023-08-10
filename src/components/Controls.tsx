@@ -22,7 +22,7 @@ const Controls: React.FC<ControlsProps> = ({ changeState }) => {
         checked={crt}
         onChange={handleChange}
       />
-      <label htmlFor="">CRT Controls</label>
+      <label htmlFor="">CRT EFFECT</label>
     </section>
   );
 };

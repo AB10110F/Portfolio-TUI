@@ -136,6 +136,7 @@ const Terminal = () => {
     }
 
     const preRef = useRef<HTMLDivElement>(null);
+    const inputRef = useRef(document.createElement("input"))
     const [input, setInput] = useState("");
     const [output, setOutput] = useState(start.join('\n'));
 
@@ -143,16 +144,19 @@ const Terminal = () => {
         if (preRef.current) {
           preRef.current.scrollTop = preRef.current.scrollHeight;
         }
+
+        inputRef.current.focus()
     }, [output]);
     
     return (
-            <div  ref={preRef} className={styles.terminal}>
+            <div  ref={preRef} className={styles.terminal} onClick={e=>inputRef.current.focus()}>
                 <pre style={vt323.style} className={styles.history}>{output}</pre>
                 <section className={styles.prompt}>
                     <article style={vt323.style}>@guest from portfolio</article>
                     <article className={styles.promptDown}>
                         <p style={vt323.style}>&gt;</p>
                         <input 
+                            ref={inputRef}
                             style={vt323.style}
                             type="text"
                             value={input} 

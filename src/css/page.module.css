@@ -59,8 +59,8 @@
   border: 3px solid rgb(255, 255, 255);
   height: 40%;
   animation: right 1.5s ease;
-  background: repeating-linear-gradient(90deg, #ffffff 0, #ffffff 5%, transparent 0, transparent 50%), repeating-linear-gradient(180deg, #ffffff 0, #ffffff 5%, transparent 0, transparent 50%);
-        background-size: 3em 3em;
+  background: repeating-linear-gradient(90deg, #ffffff 0, #ffffff 3%, transparent 0, transparent 50%), repeating-linear-gradient(180deg, #ffffff 0, #ffffff 3%, transparent 0, transparent 50%);
+        background-size: 2.5em 2.5em;
         background-color: #00000000;
         opacity: 1;
 }
@@ -88,7 +88,7 @@
 .scanner
 {
   animation: scanning 2s infinite linear;
-  background-color: rgba(133, 133, 133, 0.266);
+  background-color: rgba(133, 133, 133, 0.266); 
   position: fixed;
   top: 0;
   left: 0;
@@ -141,6 +141,12 @@
     }
 
     .main h1 
+    {
+      font-size: 5vh;
+      text-align: center;
+    }
+    
+    .bright h1 
     {
       font-size: 5vh;
       text-align: center;

@@ -14,7 +14,7 @@ const Typewriter = ({ text }: { text:string }) => {
         }, 80);
     }, [currentText]);
 
-    return <h1 className={dotFont.className}>&gt;{currentText}|</h1>
+    return <h1 className={dotFont.className}>&gt;{currentText}</h1>
 };
 
 export default Typewriter;
