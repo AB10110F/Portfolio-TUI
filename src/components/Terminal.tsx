@@ -1,17 +1,11 @@
 import React from 'react';
 import { useState, useRef, useEffect } from 'react';
 import styles from '../css/terminal.module.css'
-import { VT323 } from '@next/font/google';
-
-const vt323 = VT323({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--vt323',
-})
+import { vt323 } from '../fonts/fonts'
 
 const Terminal = () => {
 
-    const banner = [
+    const banner:string[] = [
         "      _/_/    _/_/_/      _/    _/      _/    _/    _/    _/_/_/_/",
         "   _/    _/  _/    _/  _/_/  _/  _/  _/_/  _/_/  _/  _/  _/       ",
         "  _/_/_/_/  _/_/_/      _/  _/  _/    _/    _/  _/  _/  _/_/_/    ",
@@ -33,7 +27,7 @@ const Terminal = () => {
         "Type \"help\" to view the available commands"       
     ]
 
-    const help = [
+    const help:string[] = [
         "This is the list of commands you can use: \n",
         "banner          Displays the initial greeting",
         "help            As you can see, it shows a list of commands",
@@ -47,7 +41,7 @@ const Terminal = () => {
         "cls             Clears the content of the terminal",
     ]
 
-    const skills = [
+    const skills:string[] = [
         "CSS     [████████████▁▁▁▁] 75%         C++    [████████████▁▁▁▁] 75%",
         "",
         "TS      [████████▁▁▁▁▁▁▁▁] 50%        PHP     [████████▁▁▁▁▁▁▁▁] 50%",
@@ -57,7 +51,7 @@ const Terminal = () => {
         "React   [████████▁▁▁▁▁▁▁▁] 50%        Git     [████████████▁▁▁▁] 75%",
     ]
 
-    const projects = [
+    const projects:string[] = [
         " _ __  _ __    ___  _________   ,___ ________,",
         "( /  )( /  )  /  ()( /(  /     /   /(  /  (   ",
         " /--'  /--<  /   /  /   /--   /       /    `. ",
@@ -68,8 +62,8 @@ const Terminal = () => {
         "Still working on them, most of them are private, sorry :(",
     ]
 
-    const info = [
-        "888b    | 888~~  Y88b    / ~~~888~~~      This project was built with Next.js 13", 
+    const info:string[] = [
+        "888b    | 888~~  Y88b    / ~~~888~~~      This project was build with Next.js 13", 
         "|Y88b   | 888___  Y88b  /     888         3D model was handled with three.js",
         "| Y88b  | 888      Y88b/      888         Dots grid background was made with p5.js", 
         "|  Y88b | 888      /Y88b      888   ", 
@@ -77,7 +71,7 @@ const Terminal = () => {
         "|    Y888 888___ /    Y88b    888   ",
     ]
 
-    const smallBanner = [
+    const smallBanner:string[] = [
         "Name: Bryant",
         "Mail: bryant.0@outlook.com",
         "",
@@ -86,7 +80,7 @@ const Terminal = () => {
         "",
         "Type \"help\" to view the available commands"  
     ]
-    const smallHelp = [
+    const smallHelp:string[] = [
         "This is the list of commands you can use: \n",
         "banner: Displays the initial greeting\n",
         "help: As you can see, it shows a list of commands\n",
@@ -99,7 +93,7 @@ const Terminal = () => {
         "twitter: Opens twitter in a new tab\n",
         "cls: Clears the content of the terminal\n",
     ]
-    const smallSkills = [
+    const smallSkills:string[] = [
         "CSS  [████████████▁▁▁▁] 75%",
         "",
         "C++  [████████████▁▁▁▁] 75%",
@@ -116,16 +110,16 @@ const Terminal = () => {
         "",
         "Git  [████████████▁▁▁▁] 75%",
     ]
-    const smallProjects = [
+    const smallProjects:string[] = [
         "Still working on them, most of them are private, sorry :("
     ]
-    const smallInfo = [
-        "This project was built with Next.js 13", 
+    const smallInfo:string[] = [
+        "This project was build with Next.js 13", 
         "3D model was handled with three.js",
         "Dots grid background was made with p5.js",
     ]
 
-    var start;
+    let start:string[];
     if(window.innerWidth<=760)
     {
         start=smallBanner;
@@ -141,7 +135,8 @@ const Terminal = () => {
     const [output, setOutput] = useState(start.join('\n'));
 
     useEffect(() => {
-        if (preRef.current) {
+        if (preRef.current) 
+        {
           preRef.current.scrollTop = preRef.current.scrollHeight;
         }
 

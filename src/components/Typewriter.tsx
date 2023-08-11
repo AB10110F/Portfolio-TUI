@@ -1,7 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
-import localFont from 'next/font/local';
-
-const dotFont = localFont({ src: '../app/e-dot-digital-7.ttf' })
+import { dotFont } from '../fonts/fonts'
 
 const Typewriter = ({ text }: { text:string }) => {
     const index = useRef(0);
@@ -14,7 +12,7 @@ const Typewriter = ({ text }: { text:string }) => {
         }, 80);
     }, [currentText]);
 
-    return <h1 className={dotFont.className}>&gt;{currentText}</h1>
+    return <h1 style={dotFont.style} >&gt;{currentText}</h1>
 };
 
 export default Typewriter;

@@ -7,10 +7,10 @@ const Dots = () => {
   const sketchRef = useRef<HTMLDivElement>(null!);
 
   useEffect(() => {
-    let dotSize: number = 4;
-    let spacing: number = dotSize * 10;
-    let minTvalue: number = 50;
-    let areaAffected: number = 50;
+    const dotSize: number = 4;
+    const spacing: number = dotSize * 10;
+    const minTvalue: number = 50;
+    const areaAffected: number = 50;
     let mouseIsMoving: boolean = false;
     let dots: Dot[] = [];
 
