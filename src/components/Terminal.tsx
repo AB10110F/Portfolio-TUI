@@ -24,7 +24,7 @@ const Terminal = () => {
         "|          [_][______________][_]              |     (°‿°) reddit      ,(u°)> twitter",
         "|______________________________________________|",
         "",
-        "Type \"help\" to view the available commands"       
+        "Type \"help\" to view the available commands\n\n"       
     ]
 
     const help:string[] = [
@@ -38,7 +38,7 @@ const Terminal = () => {
         "codepen         Opens codpen in a new tab",
         "reddit          Opens reddit in a new tab",
         "twitter         Opens twitter in a new tab",
-        "cls             Clears the content of the terminal",
+        "cls             Clears the content of the terminal\n\n",
     ]
 
     const skills:string[] = [
@@ -48,7 +48,7 @@ const Terminal = () => {
         "",
         "Angular [███████▁▁▁▁▁▁▁▁▁] 44%        Go      [█████████▁▁▁▁▁▁▁] 57%",
         "",
-        "React   [████████▁▁▁▁▁▁▁▁] 50%        Git     [████████████▁▁▁▁] 75%",
+        "React   [████████▁▁▁▁▁▁▁▁] 50%        Git     [████████████▁▁▁▁] 75%\n\n",
     ]
 
     const projects:string[] = [
@@ -57,9 +57,9 @@ const Terminal = () => {
         " /--'  /--<  /   /  /   /--   /       /    `. ",
         "/     /   \\_(___/ _/_ (/____/(___/  _/   (___)",
         "                 //                           ",
-        "                (/                            ",
+        "                (/                            \n\n",
         "",
-        "Still working on them, most of them are private, sorry :(",
+        "Still working on them, most of them are private, sorry :(\n\n",
     ]
 
     const info:string[] = [
@@ -68,7 +68,7 @@ const Terminal = () => {
         "| Y88b  | 888      Y88b/      888         Dots grid background was made with p5.js", 
         "|  Y88b | 888      /Y88b      888   ", 
         "|   Y88b| 888     /  Y88b     888   ", 
-        "|    Y888 888___ /    Y88b    888   ",
+        "|    Y888 888___ /    Y88b    888   \n\n",
     ]
 
     const smallBanner:string[] = [
@@ -78,7 +78,7 @@ const Terminal = () => {
         "=^..^= github       </>   codepen",
         "(°‿°) reddit      ,(u°)> twitter",
         "",
-        "Type \"help\" to view the available commands"  
+        "Type \"help\" to view the available commands\n"  
     ]
     const smallHelp:string[] = [
         "This is the list of commands you can use: \n",
@@ -108,15 +108,15 @@ const Terminal = () => {
         "",
         "Reac [████████▁▁▁▁▁▁▁▁] 50%",
         "",
-        "Git  [████████████▁▁▁▁] 75%",
+        "Git  [████████████▁▁▁▁] 75%\n",
     ]
     const smallProjects:string[] = [
-        "Still working on them, most of them are private, sorry :("
+        "Still working on them, most of them are private, sorry :(\n"
     ]
     const smallInfo:string[] = [
         "This project was build with Next.js 13", 
         "3D model was handled with three.js",
-        "Dots grid background was made with p5.js",
+        "Dots grid background was made with p5.js\n",
     ]
 
     let start:string[];
@@ -160,90 +160,45 @@ const Terminal = () => {
                                 let newOutput = "";
                                 if (e.key === "Enter")
                                 {
-                                    newOutput = output + "\n\n@guest from portfolio\n" + "> " + input + "\n\n";
-                                    if(window.innerWidth<=760)
+                                    newOutput = output + "@guest from portfolio\n" + "> " + input + "\n\n";
+                                    switch (input)
                                     {
-                                        switch (input)
-                                        {
-                                            case "banner":
-                                                newOutput += smallBanner.join('\n')
-                                                break;
-                                            case "help":
-                                                newOutput += smallHelp.join('\n')
-                                                break;
-                                            case "skills":
-                                                newOutput += smallSkills.join('\n')
-                                                break;
-                                            case "projects":
-                                                newOutput += smallProjects.join('\n')
-                                                break;
-                                            case "info":
-                                                newOutput += smallInfo.join('\n')
-                                                break;
-                                            case "github":
-                                                newOutput += "github"
-                                                window.open("https://github.com/AB10110F", '_blank');
-                                                break;
-                                            case "codepen":
-                                                newOutput += "codepen"
-                                                window.open("https://codepen.io/AB10110F", '_blank');
-                                                break;
-                                            case "reddit":
-                                                newOutput += "reddit"
-                                                window.open("https://www.reddit.com/user/AB10110F", '_blank');
-                                                break;
-                                            case "twitter":
-                                                newOutput += "twitter"
-                                                window.open("https://twitter.com/AB10110F", '_blank');
-                                                break;
-                                            case "cls":
-                                                newOutput = ""
-                                                break;
-                                            default:
-                                                newOutput += "x_x Syntax Error \"" + input + "\" is not a command"
-                                        }
-                                    }
-                                    else
-                                    {
-                                        switch (input)
-                                        {
-                                            case "banner":
-                                                newOutput += banner.join('\n')
-                                                break;
-                                            case "help":
-                                                newOutput += help.join('\n')
-                                                break;
-                                            case "skills":
-                                                newOutput += skills.join('\n')
-                                                break;
-                                            case "projects":
-                                                newOutput += projects.join('\n')
-                                                break;
-                                            case "info":
-                                                newOutput += info.join('\n')
-                                                break;
-                                            case "github":
-                                                newOutput += "github"
-                                                window.open("https://github.com/AB10110F", '_blank');
-                                                break;
-                                            case "codepen":
-                                                newOutput += "codepen"
-                                                window.open("https://codepen.io/AB10110F", '_blank');
-                                                break;
-                                            case "reddit":
-                                                newOutput += "reddit"
-                                                window.open("https://www.reddit.com/user/AB10110F", '_blank');
-                                                break;
-                                            case "twitter":
-                                                newOutput += "twitter"
-                                                window.open("https://twitter.com/AB10110F", '_blank');
-                                                break;
-                                            case "cls":
-                                                newOutput = ""
-                                                break;
-                                            default:
-                                                newOutput += "x_x Syntax Error \"" + input + "\" is not a command"
-                                        }
+                                        case "banner":
+                                            window.innerWidth<=760 ? newOutput += smallBanner.join('\n') : newOutput += banner.join('\n')
+                                            break;
+                                        case "help":
+                                            window.innerWidth<=760 ? newOutput += smallHelp.join('\n') : newOutput += help.join('\n')
+                                            break;
+                                        case "skills":
+                                            window.innerWidth<=760 ? newOutput += smallSkills.join('\n') : newOutput += skills.join('\n')
+                                            break;
+                                        case "projects":
+                                            window.innerWidth<=760 ? newOutput += smallProjects.join('\n') : newOutput += projects.join('\n')
+                                            break;
+                                        case "info":
+                                            window.innerWidth<=760 ? newOutput += smallInfo.join('\n') : newOutput += info.join('\n')
+                                            break;
+                                        case "github":
+                                            newOutput += "github"
+                                            window.open("https://github.com/AB10110F", '_blank');
+                                            break;
+                                        case "codepen":
+                                            newOutput += "codepen"
+                                            window.open("https://codepen.io/AB10110F", '_blank');
+                                            break;
+                                        case "reddit":
+                                            newOutput += "reddit"
+                                            window.open("https://www.reddit.com/user/AB10110F", '_blank');
+                                            break;
+                                        case "twitter":
+                                            newOutput += "twitter"
+                                            window.open("https://twitter.com/AB10110F", '_blank');
+                                            break;
+                                        case "cls":
+                                            newOutput = ""
+                                            break;
+                                        default:
+                                            newOutput += "x_x Syntax Error \"" + input + "\" is not a command"
                                     }
                                     setOutput(newOutput)
                                     setInput("")
