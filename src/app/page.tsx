@@ -19,7 +19,7 @@ export default function Home() {
     <main className={bright}>
       <span className={scanner}></span>
       <Image src="/scanlines.jpg" width={500} height={500} className={scanlines} alt="image" />
-      <Typewriter text={'F ront-End Developer'}/> {/* TODO What is wrong with the position 1? */}
+      <Typewriter text={'Front-End Developer'}/>
       <div className={styles.grid}>
             <Terminal/>
             <section className={styles.column}>

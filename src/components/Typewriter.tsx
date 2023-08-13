@@ -4,13 +4,18 @@ import { dotFont } from '../fonts/fonts'
 const Typewriter = ({ text }: { text:string }) => {
     const index = useRef(0);
     const [currentText, setCurrentText] = useState('');
-
-    useEffect(()=>{
-        setTimeout(()=>{
-            setCurrentText((value) => value + text.charAt(index.current));
+    
+    useEffect(() => {
+      if (index.current < text.length) {
+          const nextChar: string = text.charAt(index.current);
+          const timer = setTimeout(() => {
+            setCurrentText(val => val + nextChar);
             index.current++;
-        }, 80);
-    }, [currentText]);
+          }, 80);
+    
+          return () => clearTimeout(timer);
+        }
+      }, [currentText, text]);
 
     return <h1 style={dotFont.style} >&gt;{currentText}</h1>
 };
