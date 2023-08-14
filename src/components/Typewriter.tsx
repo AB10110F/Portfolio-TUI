@@ -6,16 +6,17 @@ const Typewriter = ({ text }: { text:string }) => {
     const [currentText, setCurrentText] = useState('');
     
     useEffect(() => {
-      if (index.current < text.length) {
-          const nextChar: string = text.charAt(index.current);
-          const timer = setTimeout(() => {
-            setCurrentText(val => val + nextChar);
-            index.current++;
-          }, 80);
-    
-          return () => clearTimeout(timer);
+        if (index.current < text.length) 
+        {
+            const nextChar: string = text.charAt(index.current);
+            const timer = setTimeout(() => {
+              setCurrentText(val => val + nextChar);
+              index.current++;
+            }, 80);
+      
+            return () => clearTimeout(timer);
         }
-      }, [currentText, text]);
+    }, [currentText, text]);
 
     return <h1 style={dotFont.style} >&gt;{currentText}</h1>
 };

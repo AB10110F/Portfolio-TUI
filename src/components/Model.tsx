@@ -1,31 +1,27 @@
 import React, { useEffect, useRef } from 'react';
-import * as THREE from 'three';
+import { WebGLRenderer, Scene, PerspectiveCamera, SphereGeometry, EdgesGeometry, LineBasicMaterial, LineSegments } from 'three';
 
 const Sphere = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null!);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+    const renderer = new WebGLRenderer({ canvas, alpha: true });
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 1000);
+    const scene = new Scene();
+    const camera = new PerspectiveCamera(30, 1, 0.1, 1000);
     camera.position.z = 5;
     camera.rotateZ(-0.2);
 
-    const geometry = new THREE.SphereGeometry(1, 22, 22, 0, Math.PI * 2, 0, Math.PI * 2);
-    const edges = new THREE.EdgesGeometry(geometry);
-    const material = new THREE.LineBasicMaterial({ color: 0xffffff });
-    const sphere = new THREE.LineSegments(edges, material);
+    const geometry = new SphereGeometry(1, 22, 22, 0, Math.PI * 2, 0, Math.PI * 2);
+    const edges = new EdgesGeometry(geometry);
+    const material = new LineBasicMaterial({ color: 0xffffff });
+    const sphere = new LineSegments(edges, material);
     scene.add(sphere);
-    /* sphere.rotation.z = 10 */
 
     const animate = () => {
       requestAnimationFrame(animate);
-
-      /* sphere.rotation.x += 0.01; */
       sphere.rotation.y += 0.01;
-
       renderer.render(scene, camera);
     };
 

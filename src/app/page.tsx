@@ -10,9 +10,9 @@ import Image from 'next/image'
 export default function Home() {
 
   const [currentCrt, setCrt] = useState(false)
-  let scanlines:string = currentCrt ? styles.scanlines : styles.hidden;
-  let scanner:string = currentCrt ? styles.scanner : styles.hidden;
-  let bright:string = currentCrt ? styles.bright : styles.main;
+  const scanlines:string = currentCrt ? styles.scanlines : styles.hidden;
+  const scanner:string = currentCrt ? styles.scanner : styles.hidden;
+  const bright:string = currentCrt ? styles.bright : styles.main;
 
 
   return (
