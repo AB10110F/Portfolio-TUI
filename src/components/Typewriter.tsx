@@ -4,6 +4,11 @@ import { dotFont } from '../fonts/fonts'
 const Typewriter = ({ text }: { text:string }) => {
     const index = useRef(0);
     const [currentText, setCurrentText] = useState('');
+
+    useEffect(() => {
+        index.current = 0;
+        setCurrentText('');
+    }, [text]);
     
     useEffect(() => {
         if (index.current < text.length) 

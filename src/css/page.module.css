@@ -1,4 +1,5 @@
-.main {
+.main 
+{
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -6,7 +7,8 @@
   padding: 30px;
 }
 
-.main h1{
+.main h1
+{
   font-size: 10vh; 
   margin: 0 0 2% 0
 }
@@ -47,11 +49,19 @@
   width: 35%;
 }
 
-.canvas
+.languageContainer 
 {
+  display: flex;
+  flex-direction: row;
   border: 3px solid rgb(255, 255, 255);
   height: 40%;
   animation: right 1s ease;
+}
+
+.canvas
+{
+  height: 100%;
+  width: 55%;
 }
 
 .bars
@@ -128,6 +138,19 @@
   }
 }
 
+@media only screen and (max-width: 1250px) and (min-width: 760px)
+{
+  .languageContainer 
+  {
+    flex-direction: column;
+  }
+  .canvas
+  {
+    height: 75%;
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 760px)
 {
     .grid
@@ -152,5 +175,9 @@
       font-size: 5vh;
       text-align: center;
       margin: 0 0 7% 0
+    }
+    .canvas
+    {
+      width: 45%;
     }
 }

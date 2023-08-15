@@ -1,6 +1,7 @@
 import '@/css/globals.css';
 import Dots from '@/components/Dots';
 import {Metadata} from 'next';
+import { LanguageContextProvider } from './context/language'
 
 export const metadata: Metadata = {
   title: 'AB10110F',
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-      <Dots/>
-        {children}
+        <LanguageContextProvider>
+          <Dots/>
+          {children}
+        </LanguageContextProvider>
       </body>
     </html>
   )
