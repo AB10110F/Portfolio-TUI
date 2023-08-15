@@ -2,8 +2,8 @@
 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     height: 100%;
     width: 30%;
     font-size: 3.2vh;
@@ -21,7 +21,6 @@
 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     height: 100%;
     width: 50%;
@@ -40,6 +39,7 @@
     -webkit-appearance: none;
     outline: none;
     cursor: pointer;
+    margin-right:10%;
 }
 
 .checkbox:checked {
@@ -56,18 +56,20 @@
     {
         width: 50%;
         font-size: 2vh;
+        justify-content: space-between;
     }
     .languageSwitchContainer
     {
         display: flex;
         flex-direction: row;
         height: 100%;
+        justify-content: center;
     }
     .section
     {
         width: 50%;
-        justify-content: space-around;
         font-size: 2vh;
+        justify-content: center;
     }
 }
 

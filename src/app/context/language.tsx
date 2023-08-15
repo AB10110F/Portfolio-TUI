@@ -1,5 +1,5 @@
 "use client"
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode, useEffect } from "react";
 
 interface LanguageContextProviderProps 
 {
@@ -15,15 +15,33 @@ interface LanguageContextValue
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
 
 export const LanguageContextProvider = ({ children }: LanguageContextProviderProps) => {
-  const [language, setLanguage] = useState('Spanish');
-  
-  console.log(navigator.language)
+    
+    const detectLanguage = ():string => { //function used to execute useEffect before useState
+        if (navigator.language.includes('es')) 
+        {
+            return 'Spanish';
+        } 
+        else 
+        {
+            return 'English';
+        }
+    };
+      
+    const startLanguage = detectLanguage();
+      
+    useEffect(() => {
+        setLanguage(startLanguage);
+    }, []);
 
-  return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
-      {children}
-    </LanguageContext.Provider>
-  );
+    const [language, setLanguage] = useState(startLanguage);
+
+    console.log(navigator.language)
+
+    return (
+        <LanguageContext.Provider value={{ language, setLanguage }}>
+        {children}
+        </LanguageContext.Provider>
+    );
 };
 
 export const useLanguageContext = (): LanguageContextValue => {

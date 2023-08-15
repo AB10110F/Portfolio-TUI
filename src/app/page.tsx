@@ -1,5 +1,5 @@
 "use client";
-import React, {use, useState} from 'react';
+import React, {useState} from 'react';
 import styles from '../css/page.module.css';
 import  Terminal  from '@/components/Terminal';
 import Typewriter from '@/components/Typewriter';

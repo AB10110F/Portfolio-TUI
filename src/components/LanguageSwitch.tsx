@@ -27,7 +27,7 @@ const Typewriter = () => {
 
     const changeState = (language:string) => {
         setLanguage(language);
-      };
+    };
       console.log(language) //TODO delete this line
     
     return (
@@ -37,9 +37,10 @@ const Typewriter = () => {
                     className={styles.checkbox}
                     type="radio"
                     name='language'
+                    checked={language=='English'}
                     onClick={() => changeState('English')}
                     />
-                <label style={vt323.style} htmlFor="">{l1}</label>
+                <label style={vt323.style} htmlFor="" >{l1}</label>
             </section>
             <section className={styles.section}>
                 <input
@@ -47,9 +48,10 @@ const Typewriter = () => {
                     type="radio"
                     id='language'
                     name='language'
+                    checked={language=='Spanish'}
                     onClick={() => changeState('Spanish')}
                 />
-                <label style={vt323.style} htmlFor="language" id='label'>{l2}</label>
+                <label style={vt323.style} htmlFor="" >{l2}</label>
             </section>
         </section>
     )
