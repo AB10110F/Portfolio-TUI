@@ -36,11 +36,12 @@ const CrtSwtich: React.FC<CrtProps> = ({ changeState }) => {
     <section className={styles.container}>
       <input
         className={styles.checkbox}
+        id='crtSwitch'
         type="checkbox"
         checked={crt}
         onChange={handleChange}
       />
-      <label style={vt323.style} htmlFor="">{label}</label>
+      <label style={vt323.style} htmlFor="crtSwitch">{label}</label>
     </section>
   );
 };

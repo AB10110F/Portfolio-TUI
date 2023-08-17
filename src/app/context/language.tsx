@@ -6,6 +6,11 @@ interface LanguageContextProviderProps
   children: ReactNode;
 }
 
+interface Navigator {
+  // Properties
+  readonly language: string;
+}
+
 interface LanguageContextValue 
 {
   language: string;
@@ -17,13 +22,20 @@ const LanguageContext = createContext<LanguageContextValue | undefined>(undefine
 export const LanguageContextProvider = ({ children }: LanguageContextProviderProps) => {
     
     const detectLanguage = ():string => { //function used to execute useEffect before useState
-        if (navigator.language.includes('es')) 
+        if (typeof navigator !== "undefined") {
+          // browser code
+            if ((navigator as Navigator).language.includes('es')) 
+            {
+                return 'Spanish';
+            } 
+            else 
+            {
+                return 'English';
+            }
+        }
+        else
         {
-            return 'Spanish';
-        } 
-        else 
-        {
-            return 'English';
+            return '';
         }
     };
       
@@ -34,8 +46,6 @@ export const LanguageContextProvider = ({ children }: LanguageContextProviderPro
     }, []);
 
     const [language, setLanguage] = useState(startLanguage);
-
-    console.log(navigator.language)
 
     return (
         <LanguageContext.Provider value={{ language, setLanguage }}>

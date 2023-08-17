@@ -289,6 +289,7 @@ const Terminal = () => {
                             ref={inputRef}
                             style={vt323.style}
                             type="text"
+                            id='prompt'
                             value={input} 
                             onChange={e=>setInput(e.target.value)}
                             onKeyDown={e=>{

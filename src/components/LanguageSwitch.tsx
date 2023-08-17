@@ -1,9 +1,8 @@
-import React, {useState, useEffect, useRef} from 'react';
 import styles from '../css/switch.module.css'
 import { vt323 } from '../fonts/fonts';
 import { useLanguageContext } from '../app/context/language';
 
-const Typewriter = () => {
+const LanguageSwitch = () => {
     const {language, setLanguage} = useLanguageContext();
 
     let l1:string
@@ -28,7 +27,6 @@ const Typewriter = () => {
     const changeState = (language:string) => {
         setLanguage(language);
     };
-      console.log(language) //TODO delete this line
     
     return (
         <section className={styles.languageSwitchContainer}>
@@ -37,24 +35,25 @@ const Typewriter = () => {
                     className={styles.checkbox}
                     type="radio"
                     name='language'
+                    id="english"
                     checked={language=='English'}
-                    onClick={() => changeState('English')}
+                    onChange={() => changeState('English')}
                     />
-                <label style={vt323.style} htmlFor="" >{l1}</label>
+                <label style={vt323.style} htmlFor="english" >{l1}</label>
             </section>
             <section className={styles.section}>
                 <input
                     className={styles.checkbox}
                     type="radio"
-                    id='language'
+                    id='spanish'
                     name='language'
                     checked={language=='Spanish'}
-                    onClick={() => changeState('Spanish')}
+                    onChange={() => changeState('Spanish')}
                 />
-                <label style={vt323.style} htmlFor="" >{l2}</label>
+                <label style={vt323.style} htmlFor="spanish" >{l2}</label>
             </section>
         </section>
     )
 };
 
-export default Typewriter;
+export default LanguageSwitch;
