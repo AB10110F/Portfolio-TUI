@@ -9,6 +9,35 @@
     border: 3px solid rgb(255, 255, 255);
 }
 
+.terminal__history
+{
+    padding: 15px 15px 0px 15px;
+    width: 100%;
+    color: white;
+}
+
+.terminal__prompt
+{
+    padding: 0 15px 15px 15px;
+}
+
+.terminal__inputRow
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.terminal__prompt input
+{
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    /* margin-top: 10px */;
+    font-size: 3vh;
+}
+
 @keyframes bottom
 {
     0%{
@@ -27,44 +56,16 @@
     }
 }
 
-.history
-{
-    padding: 15px 15px 0px 15px;
-    /* white-space: pre-wrap;
-    word-wrap: break-word; */
-    width: 100%;
-    color: white;
-}
-
-.prompt
-{
-    padding: 0 15px 15px 15px;
-}
-
-.promptDown
-{
-    display: flex;
-    flex-direction: row;
-}
-
-.prompt input
-{
-    border: none;
-    outline: none;
-    width: 100%;
-    background-color: transparent;
-    color: white;
-    /* margin-top: 10px */;
-    font-size: 3vh;
-}
-
-@media only screen and (max-width: 1250px)
+/* @media only screen and (max-width: 1250px) */
+@media only screen and (max-width: 1250px) and (min-width: 760px)
 {
     .terminal
     {
         font-size: 125%;
+        width: 100%;
+        height: 135%;
     }
-    .prompt input
+    .terminal__prompt input
     {
         font-size: 100%;
     }
@@ -78,7 +79,7 @@
         height: 100%;
     }
 
-    .history
+    .terminal__history
     {
         white-space: pre-wrap;
         word-wrap: break-word;

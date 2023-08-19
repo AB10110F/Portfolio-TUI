@@ -40,7 +40,7 @@ const Terminal = () => {
             "|          [_][______________][_]              |     (°‿°) reddit      ,(u°)> twitter",
             "|______________________________________________|",
             "",
-            "Type \"help\" to view the available commands\n\n"       
+            "Type \"help\" to view the available commands\n\n",       
         ]
     
         help = [
@@ -64,7 +64,6 @@ const Terminal = () => {
             "/     /   \\_(___/ _/_ (/____/(___/  _/   (___)",
             "                 //                           ",
             "                (/                            \n\n",
-            "",
             "Still working on them, most of them are private, sorry :(\n\n",
         ]
     
@@ -84,7 +83,7 @@ const Terminal = () => {
             "=^..^= github       </>   codepen",
             "(°‿°) reddit      ,(u°)> twitter",
             "",
-            "Type \"help\" to view the available commands\n"  
+            "Type \"help\" to view the available commands\n\n"  
         ]
     
         smallHelp= [
@@ -98,17 +97,17 @@ const Terminal = () => {
             "codepen: Opens codpen in a new tab\n",
             "reddit: Opens reddit in a new tab\n",
             "twitter: Opens twitter in a new tab\n",
-            "cls: Clears the content of the terminal\n",
+            "cls: Clears the content of the terminal\n\n",
         ]
     
         smallProjects = [
-            "Still working on them, most of them are private, sorry :(\n"
+            "Still working on them, most of them are private, sorry :(\n\n"
         ]
         
         smallInfo = [
             "This project was build with Next.js 13", 
             "3D model was handled with three.js",
-            "Dots grid background was made with p5.js\n",
+            "Dots grid background was made with p5.js\n\n",
         ]
     }
     else if(language == 'Spanish')
@@ -149,16 +148,6 @@ const Terminal = () => {
             "cls             Borra el contenido de la terminal\n\n",
         ]
     
-        skills = [
-            "CSS     [████████████▁▁▁▁] 75%         C++    [████████████▁▁▁▁] 75%",
-            "",
-            "TS      [████████▁▁▁▁▁▁▁▁] 50%        PHP     [████████▁▁▁▁▁▁▁▁] 50%",
-            "",
-            "Angular [███████▁▁▁▁▁▁▁▁▁] 44%        Go      [█████████▁▁▁▁▁▁▁] 57%",
-            "",
-            "React   [████████▁▁▁▁▁▁▁▁] 50%        Git     [████████████▁▁▁▁] 75%\n\n",
-        ]
-    
         projects = [
             " _ __  _ __    ___  _________   ,___ ________,",
             "( /  )( /  )  /  ()( /(  /     /   /(  /  (   ",
@@ -166,7 +155,6 @@ const Terminal = () => {
             "/     /   \\_(___/ _/_ (/____/(___/  _/   (___)",
             "                 //                           ",
             "                (/                            \n\n",
-            "",
             "Aún no están dispnibles :(\n\n",
         ]
     
@@ -186,7 +174,7 @@ const Terminal = () => {
             "=^..^= github       </>   codepen",
             "(°‿°) reddit      ,(u°)> twitter",
             "",
-            "Type \"help\" to view the available commands\n"  
+            "Type \"help\" to view the available commands\n\n"  
         ]
     
         smallHelp= [
@@ -200,17 +188,17 @@ const Terminal = () => {
             "codepen: Abre codepen en una nueva pestaña\n",
             "reddit: Abre reddit en una nueva pestaña\n",
             "twitter: Abre twitter en una nueva pestaña\n",
-            "cls: Borra el contenido de la terminal\n",
+            "cls: Borra el contenido de la terminal\n\n",
         ]
     
         smallProjects = [
-            "Aún no están dispnibles :(\n",
+            "Aún no están dispnibles :(\n\n",
         ]
         
         smallInfo = [
             "Este proyecto fue hecho con Next.js 13", 
             "Él modelo 3D fue añadido con three.js",
-            "La cuadrícula de puntos fue hecha con p5.js\n", 
+            "La cuadrícula de puntos fue hecha con p5.js\n\n", 
         ]
     }
     else
@@ -251,7 +239,7 @@ const Terminal = () => {
         "",
         "Reac [████████▁▁▁▁▁▁▁▁] 50%",
         "",
-        "Git  [████████████▁▁▁▁] 75%\n",
+        "Git  [████████████▁▁▁▁] 75%\n\n",
     ]
 
     let start:string[];
@@ -280,10 +268,10 @@ const Terminal = () => {
     
     return (
             <div  ref={preRef} className={styles.terminal} onClick={e=>inputRef.current.focus()}>
-                <pre style={vt323.style} className={styles.history}>{output}</pre>
-                <section className={styles.prompt}>
+                <pre style={vt323.style} className={styles.terminal__history}>{output}</pre>
+                <section className={styles.terminal__prompt}>
                     <article style={vt323.style}>@guest from portfolio</article>
-                    <article className={styles.promptDown}>
+                    <article className={styles.terminal__inputRow}>
                         <p style={vt323.style}>&gt;</p>
                         <input 
                             ref={inputRef}
@@ -315,19 +303,15 @@ const Terminal = () => {
                                             window.innerWidth<=760 ? newOutput += smallInfo.join('\n') : newOutput += info.join('\n')
                                             break;
                                         case "github":
-                                            newOutput += "github"
                                             window.open("https://github.com/AB10110F", '_blank');
                                             break;
                                         case "codepen":
-                                            newOutput += "codepen"
                                             window.open("https://codepen.io/AB10110F", '_blank');
                                             break;
                                         case "reddit":
-                                            newOutput += "reddit"
                                             window.open("https://www.reddit.com/user/AB10110F", '_blank');
                                             break;
                                         case "twitter":
-                                            newOutput += "twitter"
                                             window.open("https://twitter.com/AB10110F", '_blank');
                                             break;
                                         case "cls":

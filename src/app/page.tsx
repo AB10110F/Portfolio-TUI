@@ -15,7 +15,7 @@ export default function Home() {
   const {language, setLanguage} = useLanguageContext();
   const scanlines:string = currentCrt ? styles.scanlines : styles.hidden;
   const scanner:string = currentCrt ? styles.scanner : styles.hidden;
-  const bright:string = currentCrt ? styles.bright : styles.main;
+  const text:string = styles.main + " " + (currentCrt ? styles.bright: "");
 
   let title:string
   if(language == 'English')
@@ -32,13 +32,13 @@ export default function Home() {
   }
 
   return (
-    <main className={bright}>
+    <main className={text}>
       <span className={scanner}></span>
       <Image src="/scanlines.jpg" width={500} height={500} className={scanlines} alt="image" />
       <Typewriter text={title}/>
       <div className={styles.grid}>
             <Terminal/>
-            <aside className={styles.column}>
+            <aside className={styles.aside}>
                 <section className ={styles.languageContainer}>
                     <article className={styles.canvas}>
                         <Model/>
@@ -46,7 +46,7 @@ export default function Home() {
                     <LanguageSwitch/>
                 </section>
                 <article className={styles.bars}></article>
-                <article className={styles.controls}>
+                <article className={styles.crtSwitch}>
                     <CrtSwitch changeState={(currentCrt) => setCrt(currentCrt)} />
                 </article>
             </aside>

@@ -1,15 +1,3 @@
-  :root {
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-  }
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -20,9 +8,7 @@
 ::-webkit-scrollbar{height: 10px; width: 10px;}
 ::-webkit-scrollbar-thumb{background:#fdfdfd; border-radius: 0px;}
 
-html{
-  background-color: black; /*TODO*/
-}
+html{ background-color: black; }
  
 html,
 body {
@@ -33,10 +19,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
