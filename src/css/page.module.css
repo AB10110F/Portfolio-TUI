@@ -153,31 +153,33 @@
 
 @media only screen and (max-width: 760px)
 {
-    .grid
-    {
-        flex-direction: column;
-    }
-    .column
-    {
-        width: 100%;
-        height: 150%;
-    }
-
-    .main h1 
-    {
-      font-size: 5vh;
-      text-align: center;
-      margin: 0 0 7% 0
-    }
-    
-    .bright h1 
-    {
-      font-size: 5vh;
-      text-align: center;
-      margin: 0 0 7% 0
-    }
-    .canvas
-    {
-      width: 45%;
-    }
+  .grid
+  {
+      flex-direction: column;
+  }
+  .column
+  {
+      width: 100%;
+      height: 150%;
+  }
+  .main h1 
+  {
+    font-size: 5vh;
+    text-align: center;
+    margin: 0 0 7% 0;
+    height: 12vh;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .bright h1 
+  {
+    font-size: 5vh;
+    text-align: center;
+    margin: 0 0 7% 0;
+  }
+  .canvas
+  {
+    width: 45%;
+  }
 }

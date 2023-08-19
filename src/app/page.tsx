@@ -38,7 +38,7 @@ export default function Home() {
       <Typewriter text={title}/>
       <div className={styles.grid}>
             <Terminal/>
-            <section className={styles.column}>
+            <aside className={styles.column}>
                 <section className ={styles.languageContainer}>
                     <article className={styles.canvas}>
                         <Model/>
@@ -49,7 +49,7 @@ export default function Home() {
                 <article className={styles.controls}>
                     <CrtSwitch changeState={(currentCrt) => setCrt(currentCrt)} />
                 </article>
-            </section>
+            </aside>
       </div>
     </main>
   )
