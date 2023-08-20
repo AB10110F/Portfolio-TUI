@@ -8,8 +8,9 @@ import CrtSwitch from '@/components/CrtSwitch';
 import LanguageSwitch from '@/components/LanguageSwitch';
 import { useLanguageContext } from './context/language';
 import Image from 'next/image';
+import dynamic from "next/dynamic";
 
-export default function Home() {
+function Home() {
 
   const [currentCrt, setCrt] = useState(false)
   const {language, setLanguage} = useLanguageContext();
@@ -54,3 +55,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default dynamic (() => Promise.resolve(Home), {ssr: false})

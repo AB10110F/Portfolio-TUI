@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import styles from '../css/switch.module.css';
 import { vt323 } from '../fonts/fonts';
 import { useLanguageContext } from '../app/context/language';
-import dynamic from "next/dynamic";
-
 
 interface CrtProps {
   changeState: (newValue: boolean) => void;
@@ -48,6 +46,4 @@ const CrtSwtich: React.FC<CrtProps> = ({ changeState }) => {
   );
 };
 
-export default dynamic (() => Promise.resolve(CrtSwtich), {ssr: false})
-
-/* export default CrtSwtich; */
+export default CrtSwtich;
