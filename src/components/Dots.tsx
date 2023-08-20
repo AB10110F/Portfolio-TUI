@@ -96,7 +96,11 @@ const Dots = () => {
       }
     }
 
-    new p5(sketch, sketchRef.current as HTMLElement);
+    
+    if (typeof window !== 'undefined') {
+      const p5 = require('p5');
+      new p5(sketch, sketchRef.current);
+    }
   }, []);
 
   return <div className={styles.background} ref={sketchRef} />;

@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useLanguageContext } from '../app/context/language';
 import styles from '../css/terminal.module.css'
 import { vt323 } from '../fonts/fonts'
+/* import dynamic from "next/dynamic"; */
 
 const Terminal = () => {
 
@@ -330,5 +331,7 @@ const Terminal = () => {
             </div>
     )
 };
+
+/* export default dynamic (() => Promise.resolve(Terminal), {ssr: false}) */
 
 export default Terminal

@@ -1,6 +1,7 @@
 import styles from '../css/switch.module.css'
 import { vt323 } from '../fonts/fonts';
 import { useLanguageContext } from '../app/context/language';
+import dynamic from "next/dynamic";
 
 const LanguageSwitch = () => {
     const {language, setLanguage} = useLanguageContext();
@@ -56,4 +57,6 @@ const LanguageSwitch = () => {
     )
 };
 
-export default LanguageSwitch;
+export default dynamic (() => Promise.resolve(LanguageSwitch), {ssr: false})
+
+/* export default LanguageSwitch; */
