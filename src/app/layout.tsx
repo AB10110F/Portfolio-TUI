@@ -7,12 +7,13 @@ import Favicon from './favicon.png';
 export const metadata: Metadata = {
   title: 'AB10110F',
   description: 'Portfolio',
+  keywords: ['portfolio','developer','web developer', 'next.js'],
   icons: [
     { rel: 'icon', url: Favicon.src, }
   ],
   openGraph: {
-    ...Favicon,
-    title: 'AB10110F-Personal Website',
+    title: 'AB10110F',
+    description: 'Personal website'
   },
 }
 

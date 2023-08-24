@@ -160,7 +160,7 @@ const Terminal = () => {
     
         info = [
             "888b    | 888~~  Y88b    / ~~~888~~~      Este proyecto fue hecho con Next.js 13", 
-            "|Y88b   | 888___  Y88b  /     888         Él modelo 3D fue añadido con three.js",
+            "|Y88b   | 888___  Y88b  /     888         El modelo 3D fue añadido con three.js",
             "| Y88b  | 888      Y88b/      888         La cuadrícula de puntos fue hecha con p5.js", 
             "|  Y88b | 888      /Y88b      888   ", 
             "|   Y88b| 888     /  Y88b     888   ", 
@@ -197,7 +197,7 @@ const Terminal = () => {
         
         smallInfo = [
             "Este proyecto fue hecho con Next.js 13", 
-            "Él modelo 3D fue añadido con three.js",
+            "El modelo 3D fue añadido con three.js",
             "La cuadrícula de puntos fue hecha con p5.js\n\n", 
         ]
     }
@@ -318,7 +318,7 @@ const Terminal = () => {
                                             newOutput = ""
                                             break;
                                         default:
-                                            newOutput += "x_x Syntax Error \"" + input + "\" is not a command"
+                                            newOutput += "x_x Syntax Error \"" + input + "\" is not a command\n\n"
                                     }
                                     setOutput(newOutput)
                                     setInput("")

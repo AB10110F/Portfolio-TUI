@@ -34,8 +34,8 @@ function Home() {
 
   return (
     <main className={text}>
-      <span className={scanner}></span>
       <Image src="/scanlines.jpg" width={500} height={500} className={scanlines} alt="image" />
+      <span className={scanner}></span>
       <Typewriter text={title}/>
       <div className={styles.grid}>
             <Terminal/>

@@ -6,7 +6,7 @@
     ██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║╚██████╔╝
     ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝ 
 </pre>
-Since everybody has one, I decided to develop my own website. I've had enough of clean websites with the same layouts, so I decided to mimic a terminal on the browser. I know it is not a good ux interface, but I wanted to stand out somehow, besides terminals are cool in my opinion :)
+Since everybody has one, I decided to develop my own website. There are already enough websites with the same layout, so I tried to simulate a terminal for mine. I am aware that this is not the best ux interface, but I wanted to stand out somehow, besides terminals are cool in my opinion :)
 
 ## Build with
 - Next.js
