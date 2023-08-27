@@ -2,9 +2,9 @@
 import React, {useState} from 'react';
 import styles from '../css/page.module.css';
 import  Terminal  from '@/components/Terminal';
-import Typewriter from '@/components/Typewriter';
 import Model from '@/components/Model';
 import CrtSwitch from '@/components/CrtSwitch';
+import { dotFont } from '../fonts/fonts'
 import LanguageSwitch from '@/components/LanguageSwitch';
 import { useLanguageContext } from './context/language';
 import Image from 'next/image';
@@ -21,11 +21,11 @@ function Home() {
   let title:string
   if(language == 'English')
   {
-      title = 'Front-End Developer'
+      title = 'DUST AND ECHOES'
   }
   else if(language == 'Spanish')
   {
-      title = 'Desarrollador Front-End'
+      title = 'POLVO Y ECOS'
   }
   else
   {
@@ -36,7 +36,9 @@ function Home() {
     <main className={text}>
       <Image src="/scanlines.jpg" width={500} height={500} className={scanlines} alt="image" />
       <span className={scanner}></span>
-      <Typewriter text={title}/>
+      <section className={styles.header}>
+            <h1 style={dotFont.style}>{title}</h1>
+      </section>
       <div className={styles.grid}>
             <Terminal/>
             <aside className={styles.aside}>
