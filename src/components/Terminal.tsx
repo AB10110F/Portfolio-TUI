@@ -22,27 +22,28 @@ const Terminal = () => {
     if(language == 'English')
     {
         banner = [
-            "      _/_/    _/_/_/      _/    _/      _/    _/    _/    _/_/_/_/",
-            "   _/    _/  _/    _/  _/_/  _/  _/  _/_/  _/_/  _/  _/  _/       ",
-            "  _/_/_/_/  _/_/_/      _/  _/  _/    _/    _/  _/  _/  _/_/_/    ",
-            " _/    _/  _/    _/    _/  _/  _/    _/    _/  _/  _/  _/         ",
-            "_/    _/  _/_/_/      _/    _/      _/    _/    _/    _/          ",
+            "           ,db                                                                     ",
+            "           jSDl,                                                                   ",
+            "           DEMP\".                                                                 ",
+            "           'YLObP                      Name: Bryant                                ",
+            "             `YN`                      Mail: bryant.0@outlook.com                  ",
+            "               Y\"                                                                 ",
+            "                Y;                     You can also check my social media          ",
+            "               ,Lb  .,,. ,,ss          just type one of the following options:     ",
+            "            .,dOVEl SDEMILO'                                                       ",
+            "           dLOVENUSDEMILOP                                                         ",
+            "          ;OP*NUSDP**LOVEb,            =^..^= github        </>   codepen          ",
+            "          dEl \"DE;   YENUP                                                        ",
+            "          YUS :l`     YS'              (°‿°) reddit       ,(u°)> twitter           ",
+            "          :*'       .,DE.                                                          ",
+            "                  USD`YI                                                           ",
+            "                 dDEY  O:              ║▌║█║▌│║▌║▌█║▌║█║▌│║▌║▌█║▌║                 ",
+            "                .EMIb ,E.                                                          ",
+            "               ,dILO* NUY                                                          ",
+            "              ,ILOVb ,SD'              Type \"help\" to view the available commands\n",
             "",
-            "________________________________________________",
-            "|      _____________________________           |     Name: Bryant",
-            "| [][] _____________________________ [_][_][_] |     Mail: bryant.0@outlook.com",
-            "| [][] [_][_][_] [_][_][_][_] [_][_] [_][_][_] |     ",
-            "|                                              |     You can also check my",
-            "| [][] [][][][][][][][][][][][][][_] [][][][]  |     social media, just type",
-            "| [][] [_][][][][][][][][][][][][][] [][][][]  |     one of the following options:",
-            "| [][] [__][][][][][][][][][][][][_] [][][][]  |     ",
-            "| [][] [___][][][][][][][][][][][__] [__][][]  |     =^..^= github       </>   codepen",
-            "|          [_][______________][_]              |     (°‿°) reddit      ,(u°)> twitter",
-            "|______________________________________________|",
-            "",
-            "Type \"help\" to view the available commands\n\n",       
         ]
-    
+
         help = [
             "This is the list of commands you can use: \n",
             "banner          Displays the initial greeting",
@@ -56,7 +57,7 @@ const Terminal = () => {
             "twitter         Opens twitter in a new tab",
             "cls             Clears the content of the terminal\n\n",
         ]
-    
+
         projects = [
             " _ __  _ __    ___  _________   ,___ ________,",
             "( /  )( /  )  /  ()( /(  /     /   /(  /  (   ",
@@ -66,26 +67,23 @@ const Terminal = () => {
             "                (/                            \n\n",
             "Still working on them, most of them are private, sorry :(\n\n",
         ]
-    
+
         info = [
-            "888b    | 888~~  Y88b    / ~~~888~~~      This project was build with Next.js 13", 
+            "888b    | 888~~  Y88b    / ~~~888~~~      This project was build with Next.js 13",
             "|Y88b   | 888___  Y88b  /     888         3D model was handled with three.js",
-            "| Y88b  | 888      Y88b/      888         Dots grid background was made with p5.js", 
-            "|  Y88b | 888      /Y88b      888   ", 
-            "|   Y88b| 888     /  Y88b     888   ", 
+            "| Y88b  | 888      Y88b/      888         Dots grid background was made with p5.js",
+            "|  Y88b | 888      /Y88b      888   ",
+            "|   Y88b| 888     /  Y88b     888   ",
             "|    Y888 888___ /    Y88b    888   \n\n",
         ]
-    
+
         smallBanner = [
             "Name: Bryant",
             "Mail: bryant.0@outlook.com",
             "",
-            "=^..^= github       </>   codepen",
-            "(°‿°) reddit      ,(u°)> twitter",
-            "",
-            "Type \"help\" to view the available commands\n\n"  
+            "Type \"help\" to view the available commands\n\n"
         ]
-    
+
         smallHelp= [
             "This is the list of commands you can use: \n",
             "banner: Displays the initial greeting\n",
@@ -99,13 +97,13 @@ const Terminal = () => {
             "twitter: Opens twitter in a new tab\n",
             "cls: Clears the content of the terminal\n\n",
         ]
-    
+
         smallProjects = [
             "Still working on them, most of them are private, sorry :(\n\n"
         ]
-        
+
         smallInfo = [
-            "This project was build with Next.js 13", 
+            "This project was build with Next.js 13",
             "3D model was handled with three.js",
             "Dots grid background was made with p5.js\n\n",
         ]
@@ -113,27 +111,28 @@ const Terminal = () => {
     else if(language == 'Spanish')
     {
         banner = [
-            "      _/_/    _/_/_/      _/    _/      _/    _/    _/    _/_/_/_/",
-            "   _/    _/  _/    _/  _/_/  _/  _/  _/_/  _/_/  _/  _/  _/       ",
-            "  _/_/_/_/  _/_/_/      _/  _/  _/    _/    _/  _/  _/  _/_/_/    ",
-            " _/    _/  _/    _/    _/  _/  _/    _/    _/  _/  _/  _/         ",
-            "_/    _/  _/_/_/      _/    _/      _/    _/    _/    _/          ",
+            "           ,db                                                                     ",
+            "           jSDl,                                                                   ",
+            "           DEMP\".                                                                 ",
+            "           'YLObP                      Nombre: Bryant                              ",
+            "             `YN`                      Correo: bryant.0@outlook.com                ",
+            "               Y\"                                                                 ",
+            "                Y;                     También puedes encontrarme en mis redes     ",
+            "               ,Lb  .,,. ,,ss          tecleando unas de las siguientes opciones:  ",
+            "            .,dOVEl SDEMILO'                                                       ",
+            "           dLOVENUSDEMILOP                                                         ",
+            "          ;OP*NUSDP**LOVEb,            =^..^= github        </>   codepen          ",
+            "          dEl \"DE;   YENUP                                                        ",
+            "          YUS :l`     YS'              (°‿°) reddit       ,(u°)> twitter           ",
+            "          :*'       .,DE.                                                          ",
+            "                  USD`YI                                                           ",
+            "                 dDEY  O:              ║▌║█║▌│║▌║▌█║▌║█║▌│║▌║▌█║▌║                 ",
+            "                .EMIb ,E.                                                          ",
+            "               ,dILO* NUY                                                          ",
+            "              ,ILOVb ,SD'              Teclea \"help\" para ver los comandos disponibles\n",
             "",
-            "________________________________________________",
-            "|      _____________________________           |     Nombre: Bryant",
-            "| [][] _____________________________ [_][_][_] |     Correo: bryant.0@outlook.com",
-            "| [][] [_][_][_] [_][_][_][_] [_][_] [_][_][_] |     ",
-            "|                                              |     También puedes checar mis",
-            "| [][] [][][][][][][][][][][][][][_] [][][][]  |     redes sociales tecleando",
-            "| [][] [_][][][][][][][][][][][][][] [][][][]  |     una de las siguientes opciones:",
-            "| [][] [__][][][][][][][][][][][][_] [][][][]  |     ",
-            "| [][] [___][][][][][][][][][][][__] [__][][]  |     =^..^= github       </>   codepen",
-            "|          [_][______________][_]              |     (°‿°) reddit      ,(u°)> twitter",
-            "|______________________________________________|",
-            "",
-            "Teclea \"help\" para ver los comandos disponibles\n\n"       
         ]
-    
+
         help = [
             "Esta es la lista de comandos que puedes usar: \n",
             "banner          Despliega el saludo inicial",
@@ -147,7 +146,7 @@ const Terminal = () => {
             "twitter         Abre twitter en una nueva pestaña",
             "cls             Borra el contenido de la terminal\n\n",
         ]
-    
+
         projects = [
             " _ __  _ __    ___  _________   ,___ ________,",
             "( /  )( /  )  /  ()( /(  /     /   /(  /  (   ",
@@ -157,26 +156,23 @@ const Terminal = () => {
             "                (/                            \n\n",
             "Aún no están dispnibles :(\n\n",
         ]
-    
+
         info = [
-            "888b    | 888~~  Y88b    / ~~~888~~~      Este proyecto fue hecho con Next.js 13", 
+            "888b    | 888~~  Y88b    / ~~~888~~~      Este proyecto fue hecho con Next.js 13",
             "|Y88b   | 888___  Y88b  /     888         El modelo 3D fue añadido con three.js",
-            "| Y88b  | 888      Y88b/      888         La cuadrícula de puntos fue hecha con p5.js", 
-            "|  Y88b | 888      /Y88b      888   ", 
-            "|   Y88b| 888     /  Y88b     888   ", 
+            "| Y88b  | 888      Y88b/      888         La cuadrícula de puntos fue hecha con p5.js",
+            "|  Y88b | 888      /Y88b      888   ",
+            "|   Y88b| 888     /  Y88b     888   ",
             "|    Y888 888___ /    Y88b    888   \n\n",
         ]
-    
+
         smallBanner = [
             "Nombre: Bryant",
             "Correo: bryant.0@outlook.com",
             "",
-            "=^..^= github       </>   codepen",
-            "(°‿°) reddit      ,(u°)> twitter",
-            "",
-            "Type \"help\" to view the available commands\n\n"  
+            "Teclea \"help\" para ver los comandos disponibles\n"
         ]
-    
+
         smallHelp= [
             "Esta es la lista de comandos que puedes usar: \n",
             "banner: Despliega el saludo inicial\n",
@@ -190,15 +186,15 @@ const Terminal = () => {
             "twitter: Abre twitter en una nueva pestaña\n",
             "cls: Borra el contenido de la terminal\n\n",
         ]
-    
+
         smallProjects = [
             "Aún no están dispnibles :(\n\n",
         ]
-        
+
         smallInfo = [
-            "Este proyecto fue hecho con Next.js 13", 
+            "Este proyecto fue hecho con Next.js 13",
             "El modelo 3D fue añadido con three.js",
-            "La cuadrícula de puntos fue hecha con p5.js\n\n", 
+            "La cuadrícula de puntos fue hecha con p5.js\n\n",
         ]
     }
     else
@@ -258,14 +254,14 @@ const Terminal = () => {
     const [output, setOutput] = useState(start.join('\n'));
 
     useEffect(() => {
-        if (preRef.current) 
+        if (preRef.current)
         {
           preRef.current.scrollTop = preRef.current.scrollHeight;
         }
 
         inputRef.current.focus()
     }, [output]);
-    
+
     return (
             <div  ref={preRef} className={styles.terminal} onClick={e=>inputRef.current.focus()}>
                 <pre style={vt323.style} className={styles.terminal__history}>{output}</pre>
@@ -273,12 +269,12 @@ const Terminal = () => {
                     <article style={vt323.style}>@guest from portfolio</article>
                     <article className={styles.terminal__inputRow}>
                         <p style={vt323.style}>&gt;</p>
-                        <input 
+                        <input
                             ref={inputRef}
                             style={vt323.style}
                             type="text"
                             id='prompt'
-                            value={input} 
+                            value={input}
                             onChange={e=>setInput(e.target.value)}
                             onKeyDown={e=>{
                                 let newOutput = "";

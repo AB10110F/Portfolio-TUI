@@ -36,9 +36,9 @@ function Home() {
     <main className={text}>
       <Image src="/scanlines.jpg" width={500} height={500} className={scanlines} alt="image" />
       <span className={scanner}></span>
-      <section className={styles.header}>
+      <header className={styles.header}>
             <h1 style={dotFont.style}>{title}</h1>
-      </section>
+      </header>
       <div className={styles.grid}>
             <Terminal/>
             <aside className={styles.aside}>
