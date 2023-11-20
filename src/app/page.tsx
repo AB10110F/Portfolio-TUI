@@ -34,7 +34,7 @@ function Home() {
 
   return (
     <main className={text}>
-      <Image src="/scanlines.jpg" width={500} height={500} className={scanlines} alt="image" />
+      <span className={scanlines}></span>
       <span className={scanner}></span>
       <header className={styles.header}>
             <h1 style={dotFont.style}>{title}</h1>
