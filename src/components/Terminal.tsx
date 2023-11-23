@@ -25,7 +25,7 @@ const Terminal = () => {
             "           ,db                                                                     ",
             "           jSDl,                                                                   ",
             "           DEMP\".                                                                 ",
-            "           'YLObP                      Name: Bryant                                ",
+            "           'YLObP                      Name: Bryant Hernández                      ",
             "             `YN`                      Mail: bryant.0@outlook.com                  ",
             "               Y\"                                                                 ",
             "                Y;                     You can also check my social media          ",
@@ -52,7 +52,7 @@ const Terminal = () => {
             "projects        List of my projects",
             "info            Shows all the information of the project",
             "github          Opens github in a new tab",
-            "codepen         Opens codpen in a new tab",
+            "codepen         Opens codepen in a new tab",
             "reddit          Opens reddit in a new tab",
             "twitter         Opens twitter in a new tab",
             "cls             Clears the content of the terminal\n\n",
@@ -78,7 +78,7 @@ const Terminal = () => {
         ]
 
         smallBanner = [
-            "Name: Bryant",
+            "Name: Bryant Hernández",
             "Mail: bryant.0@outlook.com",
             "",
             "Type \"help\" to view the available commands\n\n"
@@ -92,7 +92,7 @@ const Terminal = () => {
             "projects: List of my projects\n",
             "info: Shows all the information of the project\n",
             "github: Opens github in a new tab\n",
-            "codepen: Opens codpen in a new tab\n",
+            "codepen: Opens codepen in a new tab\n",
             "reddit: Opens reddit in a new tab\n",
             "twitter: Opens twitter in a new tab\n",
             "cls: Clears the content of the terminal\n\n",
@@ -114,7 +114,7 @@ const Terminal = () => {
             "           ,db                                                                     ",
             "           jSDl,                                                                   ",
             "           DEMP\".                                                                 ",
-            "           'YLObP                      Nombre: Bryant                              ",
+            "           'YLObP                      Nombre: Bryant Hernández                    ",
             "             `YN`                      Correo: bryant.0@outlook.com                ",
             "               Y\"                                                                 ",
             "                Y;                     También puedes encontrarme en mis redes     ",
@@ -167,10 +167,10 @@ const Terminal = () => {
         ]
 
         smallBanner = [
-            "Nombre: Bryant",
+            "Nombre: Bryant Hernández",
             "Correo: bryant.0@outlook.com",
             "",
-            "Teclea \"help\" para ver los comandos disponibles\n"
+            "Teclea \"help\" para ver los comandos disponibles\n\n"
         ]
 
         smallHelp= [
@@ -252,6 +252,7 @@ const Terminal = () => {
     const inputRef = useRef<HTMLInputElement>(null!);
     const [input, setInput] = useState("");
     const [output, setOutput] = useState(start.join('\n'));
+    let newOutput = "";
 
     useEffect(() => {
         if (preRef.current)
@@ -261,6 +262,56 @@ const Terminal = () => {
 
         inputRef.current.focus()
     }, [output]);
+
+    useEffect(() => {
+        window.innerWidth<=760 ? newOutput += smallBanner.join('\n') : newOutput += banner.join('\n')
+        setOutput(newOutput)
+    }, [language]);
+
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Enter")
+        {
+            newOutput = output + "@guest from portfolio\n" + "> " + input + "\n\n";
+            switch (input)
+            {
+                case "banner":
+                    window.innerWidth<=760 ? newOutput += smallBanner.join('\n') : newOutput += banner.join('\n')
+                    break;
+                case "help":
+                    window.innerWidth<=760 ? newOutput += smallHelp.join('\n') : newOutput += help.join('\n')
+                    break;
+                case "skills":
+                    window.innerWidth<=760 ? newOutput += smallSkills.join('\n') : newOutput += skills.join('\n')
+                    break;
+                case "projects":
+                    window.innerWidth<=760 ? newOutput += smallProjects.join('\n') : newOutput += projects.join('\n')
+                    break;
+                case "info":
+                    window.innerWidth<=760 ? newOutput += smallInfo.join('\n') : newOutput += info.join('\n')
+                    break;
+                case "github":
+                    window.open("https://github.com/AB10110F", '_blank');
+                    break;
+                case "codepen":
+                    window.open("https://codepen.io/AB10110F", '_blank');
+                    break;
+                case "reddit":
+                    window.open("https://www.reddit.com/user/AB10110F", '_blank');
+                    break;
+                case "twitter":
+                    window.open("https://twitter.com/AB10110F", '_blank');
+                    break;
+                case "cls":
+                    newOutput = ""
+                    break;
+                default:
+                    language == 'English' ? newOutput += "x_x Syntax Error \"" + input + "\" is not a command\n\n" : newOutput += "x_x Error de sintaxis \"" + input + "\" no es un comando\n\n"
+            }
+            setOutput(newOutput)
+            setInput("")
+        }
+    };
 
     return (
             <div  ref={preRef} className={styles.terminal} onClick={e=>inputRef.current.focus()}>
@@ -276,50 +327,7 @@ const Terminal = () => {
                             id='prompt'
                             value={input}
                             onChange={e=>setInput(e.target.value)}
-                            onKeyDown={e=>{
-                                let newOutput = "";
-                                if (e.key === "Enter")
-                                {
-                                    newOutput = output + "@guest from portfolio\n" + "> " + input + "\n\n";
-                                    switch (input)
-                                    {
-                                        case "banner":
-                                            window.innerWidth<=760 ? newOutput += smallBanner.join('\n') : newOutput += banner.join('\n')
-                                            break;
-                                        case "help":
-                                            window.innerWidth<=760 ? newOutput += smallHelp.join('\n') : newOutput += help.join('\n')
-                                            break;
-                                        case "skills":
-                                            window.innerWidth<=760 ? newOutput += smallSkills.join('\n') : newOutput += skills.join('\n')
-                                            break;
-                                        case "projects":
-                                            window.innerWidth<=760 ? newOutput += smallProjects.join('\n') : newOutput += projects.join('\n')
-                                            break;
-                                        case "info":
-                                            window.innerWidth<=760 ? newOutput += smallInfo.join('\n') : newOutput += info.join('\n')
-                                            break;
-                                        case "github":
-                                            window.open("https://github.com/AB10110F", '_blank');
-                                            break;
-                                        case "codepen":
-                                            window.open("https://codepen.io/AB10110F", '_blank');
-                                            break;
-                                        case "reddit":
-                                            window.open("https://www.reddit.com/user/AB10110F", '_blank');
-                                            break;
-                                        case "twitter":
-                                            window.open("https://twitter.com/AB10110F", '_blank');
-                                            break;
-                                        case "cls":
-                                            newOutput = ""
-                                            break;
-                                        default:
-                                            newOutput += "x_x Syntax Error \"" + input + "\" is not a command\n\n"
-                                    }
-                                    setOutput(newOutput)
-                                    setInput("")
-                                }
-                            }}
+                            onKeyDown={handleKeyDown}
                         />
                     </article>
                 </section>
