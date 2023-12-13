@@ -3,22 +3,23 @@ import styles from '../css/switch.module.css';
 import { vt323 } from '../fonts/fonts';
 import { useLanguageContext } from '../app/context/language';
 
-interface CrtProps {
-  changeState: (newValue: boolean) => void;
-}
-
-const CrtSwtich: React.FC<CrtProps> = ({ changeState }) => {
+const CrtSwtich = () => {
   const [crt, setCrt] = useState(false);
-  const {language, setLanguage} = useLanguageContext();
+  const {language} = useLanguageContext();
 
-  const handleChange = () => {
-    const newValue:boolean = !crt;
-    setCrt(newValue);
-    changeState(newValue);
-  };
+  const scanlines:string = crt ? styles.scanlines : styles.hidden;
+  const scanner:string = crt ? styles.scanner : styles.hidden;
 
-  let label:string;
+  if(crt==true)
+  {
+     document.body.classList.add("bright");
+  }
+  else
+  {
+    document.body.classList.remove("bright")
+  }
 
+  let label:string = '';
   if(language == 'English')
   {
       label = 'CRT EFFECT'
@@ -27,19 +28,17 @@ const CrtSwtich: React.FC<CrtProps> = ({ changeState }) => {
   {
       label = 'EFECTO CRT'
   }
-  else
-  {
-      label = ''
-  }
 
   return (
     <section className={styles.container}>
+      <span className={scanlines}></span>
+      <span className={scanner}></span>
       <input
         className={styles.checkbox}
         id='crtSwitch'
         type="checkbox"
         checked={crt}
-        onChange={handleChange}
+        onChange={()=>setCrt(!crt)}
       />
       <label style={vt323.style} htmlFor="crtSwitch">{label}</label>
     </section>

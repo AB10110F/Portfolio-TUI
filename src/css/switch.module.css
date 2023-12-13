@@ -43,12 +43,66 @@
 }
 
 .checkbox:checked {
+    z-index: 1;
     background-color: white;
     box-shadow:
     0 0 60px 20px #fff,  /* inner white */
     0 0 100px 25px #f0f, /* middle magenta */
     0 0 140px 30px #0ff; /* outer cyan */
 }
+
+.scanlines
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 25%;
+  background-color: rgb(0, 0, 0);
+  mask-image: radial-gradient(rgba(120, 120, 120, 1) 30%, rgb(60, 60, 60, 0.4) 52%);
+  background-image: linear-gradient(0deg, rgb(60, 60, 60) 50%, rgb(220, 220, 220) 50%);
+  background-size: 1.5% 1.5%;
+  animation: flicker 100ms infinite;
+  pointer-events: none;
+}
+
+.scanner
+{
+  animation: scanning 2s infinite linear;
+  background-color: rgba(133, 133, 133, 0.266);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5%;
+  width: 100%;
+}
+
+.hidden
+{
+  display: none;
+}
+
+@keyframes scanning
+{
+  0%{
+    transform: translateY(0%);
+  }
+
+  100%{
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 
 @media only screen and (max-width: 1250px) and (min-width: 760px)
 {

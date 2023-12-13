@@ -6,8 +6,8 @@ import dynamic from "next/dynamic";
 const LanguageSwitch = () => {
     const {language, setLanguage} = useLanguageContext();
 
-    let l1:string
-    let l2:string
+    let l1:string = '';
+    let l2:string = '';
 
     if(language == 'English')
     {
@@ -19,16 +19,11 @@ const LanguageSwitch = () => {
         l1 = 'INGLÉS'
         l2 = 'ESPAÑOL'
     }
-    else
-    {
-        l1 = ''
-        l2 = ''
-    }
 
     const changeState = (language:string) => {
         setLanguage(language);
     };
-    
+
     return (
         <section className={styles.languageSwitchContainer}>
             <section className={styles.section}>

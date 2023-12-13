@@ -1,5 +1,6 @@
 import '@/css/globals.css';
 import Dots from '@/components/Dots';
+import Marquee from '@/components/Marquee';
 import {Metadata} from 'next';
 import { LanguageContextProvider } from './context/language'
 import Favicon from './favicon.png';
@@ -26,6 +27,7 @@ export default function RootLayout({
     <html lang="en" translate='no'>
       <body>
         <LanguageContextProvider>
+          <Marquee/>
           <Dots/>
           {children}
         </LanguageContextProvider>

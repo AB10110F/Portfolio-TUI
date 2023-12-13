@@ -3,41 +3,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
   color: white;
   padding: 30px;
-}
-
-.header
-{
-  margin: 0 0 25px 0;
-  border: 1px solid rgb(255,255,255);
-  overflow-x: hidden;
-  display: flex;
-  align-items: center;
-}
-
-.main h1
-{
-  font-size: 10vh;
-  animation: slider 10s infinite linear;
-  display:inline-block;
-}
-
-@keyframes slider
-{
-  0%{
-    transform: translateX(-100%);
-  }
-
-  100%{
-    transform: translateX(100vw);
-  }
-}
-.bright{ text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.8em white; }
-.bright input { text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.8em white; }
-.bright h1{
-  font-size: 10vh;
 }
 
 .grid
@@ -77,10 +44,9 @@
   border: 1px solid rgb(255, 255, 255);
   height: 40%;
   animation: right 1.5s ease;
-  background: repeating-linear-gradient(90deg, #ffffff 0, #ffffff 3%, transparent 0, transparent 50%), repeating-linear-gradient(180deg, #ffffff 0, #ffffff 3%, transparent 0, transparent 50%);
-        background-size: 8% 20%;
-        background-color: #00000000;
-        opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .crtSwitch
@@ -91,48 +57,6 @@
   justify-content: center;
   animation: right 2s ease;
 }
-
-.scanlines
-{
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 25%;
-  background-color: rgb(0, 0, 0);
-  mask-image: radial-gradient(rgba(120, 120, 120, 1) 30%, rgb(60, 60, 60, 0.4) 52%);
-  background-image: linear-gradient(0deg, rgb(60, 60, 60) 50%, rgb(220, 220, 220) 50%);
-  background-size: 1.5% 1.5%;
-  animation: flicker 100ms infinite;
-  pointer-events: none;
-}
-
-.scanner
-{
-  animation: scanning 2s infinite linear;
-  background-color: rgba(133, 133, 133, 0.266);
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 5%;
-  width: 100%;
-}
-
-.hidden
-{
-  display: none;
-}
-
-@keyframes flicker {
-  0% {
-    transform: translateY(1px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
 
 @keyframes right
 {
@@ -150,16 +74,6 @@
   }
 }
 
-@keyframes scanning
-{
-  0%{
-    transform: translateY(0%);
-  }
-
-  100%{
-    transform: translateY(100vh);
-  }
-}
 
 @media only screen and (max-width: 1250px) and (min-width: 760px)
 {
@@ -169,7 +83,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    height: 100%;
+    height: 50%;
     width: 100%;
   }
   .languageContainer
@@ -192,14 +106,6 @@
   {
     height: 100%;
   }
-  .header
-  {
-    height: 18vh;
-  }
-  .main h1
-  {
-    font-size: 7vh;
-  }
 }
 
 @media only screen and (max-width: 760px)
@@ -211,24 +117,10 @@
   .aside
   {
       width: 100%;
-      height: 150%;
+      height: 60%;
   }
-  .header
-  {
-    height: 12vh;
-  }
-  .main h1
-  {
-    font-size: 5vh;
-    text-align: center;
-  }
-
   .canvas
   {
     width: 45%;
-  }
-  .bars
-  {
-    background-size: 11% 30%;
   }
 }

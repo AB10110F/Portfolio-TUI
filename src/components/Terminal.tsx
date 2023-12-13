@@ -6,18 +6,18 @@ import { vt323 } from '../fonts/fonts'
 
 const Terminal = () => {
 
-    const {language, setLanguage} = useLanguageContext();
+    const {language} = useLanguageContext();
 
-    let banner:string[];
-    let help:string[];
-    let skills:string[];
-    let projects:string[];
-    let info:string[];
-    let smallBanner:string[];
-    let smallHelp:string[];
-    let smallSkills:string[];
-    let smallProjects:string[];
-    let smallInfo:string[];
+    let banner:string[] = [''];
+    let help:string[] = [''];
+    let skills:string[] = [''];
+    let projects:string[] = [''];
+    let info:string[] = [''];
+    let smallBanner:string[] = [''];
+    let smallHelp:string[] = [''];
+    let smallSkills:string[] = [''];
+    let smallProjects:string[] = [''];
+    let smallInfo:string[] = [''];
 
     if(language == 'English')
     {
@@ -196,19 +196,6 @@ const Terminal = () => {
             "El modelo 3D fue añadido con three.js",
             "La cuadrícula de puntos fue hecha con p5.js\n\n",
         ]
-    }
-    else
-    {
-        banner = [''];
-        help = [''];
-        skills = [''];
-        projects = [''];
-        info = [''];
-        smallBanner = [''];
-        smallHelp= [''];
-        smallSkills = [''];
-        smallProjects = [''];
-        smallInfo = [''];
     }
 
     skills = [
