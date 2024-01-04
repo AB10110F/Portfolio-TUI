@@ -62,7 +62,7 @@
   background-color: rgb(0, 0, 0);
   mask-image: radial-gradient(rgba(120, 120, 120, 1) 30%, rgb(60, 60, 60, 0.4) 52%);
   background-image: linear-gradient(0deg, rgb(60, 60, 60) 50%, rgb(220, 220, 220) 50%);
-  background-size: 1.5% 1.5%;
+  background-size: 1.2% 1.2%;
   animation: flicker 100ms infinite;
   pointer-events: none;
 }
@@ -96,7 +96,7 @@
 
 @keyframes flicker {
   0% {
-    transform: translateY(1px);
+    transform: translateY(2px);
   }
   100% {
     transform: translateY(0px);
