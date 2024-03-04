@@ -6,25 +6,23 @@ import dynamic from "next/dynamic";
 
 const Marquee = () => {
 
-  const {language} = useLanguageContext();
+  const { language } = useLanguageContext();
 
-  let title:string = '';
-  if(language == 'English')
-  {
-      title = 'DUST AND ECHOES'
+  let title: string = '';
+  if (language == 'English') {
+    title = 'DUST AND ECHOES'
   }
-  else if(language == 'Spanish')
-  {
-      title = 'POLVO Y ECOS'
+  else if (language == 'Spanish') {
+    title = 'POLVO Y ECOS'
   }
 
-    return (
-        <>
-          <header className={styles.header}>
-            <h1 style={dotFont.style}>{title}</h1>
-          </header>
-        </>
-    );
+  return (
+    <>
+      <header className={styles.header}>
+        <h1 style={dotFont.style}>{title}</h1>
+      </header>
+    </>
+  );
 };
 
-export default dynamic (() => Promise.resolve(Marquee), {ssr: false})
+export default dynamic(() => Promise.resolve(Marquee), { ssr: false })

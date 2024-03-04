@@ -5,28 +5,24 @@ import { useLanguageContext } from '../app/context/language';
 
 const CrtSwtich = () => {
   const [crt, setCrt] = useState(false);
-  const {language} = useLanguageContext();
+  const { language } = useLanguageContext();
 
-  const scanlines:string = crt ? styles.scanlines : styles.hidden;
-  const scanner:string = crt ? styles.scanner : styles.hidden;
+  const scanlines: string = crt ? styles.scanlines : styles.hidden;
+  const scanner: string = crt ? styles.scanner : styles.hidden;
 
-  if(crt==true)
-  {
-     document.body.classList.add("bright");
+  if (crt == true) {
+    document.body.classList.add("bright");
   }
-  else
-  {
+  else {
     document.body.classList.remove("bright")
   }
 
-  let label:string = '';
-  if(language == 'English')
-  {
-      label = 'CRT EFFECT'
+  let label: string = '';
+  if (language == 'English') {
+    label = 'CRT EFFECT'
   }
-  else if(language == 'Spanish')
-  {
-      label = 'EFECTO CRT'
+  else if (language == 'Spanish') {
+    label = 'EFECTO CRT'
   }
 
   return (
@@ -38,7 +34,7 @@ const CrtSwtich = () => {
         id='crtSwitch'
         type="checkbox"
         checked={crt}
-        onChange={()=>setCrt(!crt)}
+        onChange={() => setCrt(!crt)}
       />
       <label style={vt323.style} htmlFor="crtSwitch">{label}</label>
     </section>

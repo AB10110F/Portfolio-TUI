@@ -5,10 +5,19 @@
   border: 0;
 }
 
-::-webkit-scrollbar{height: 10px; width: 10px;}
-::-webkit-scrollbar-thumb{background:#fdfdfd; border-radius: 0px;}
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
 
-html{ background-color: black; }
+::-webkit-scrollbar-thumb {
+  background: #fdfdfd;
+  border-radius: 0px;
+}
+
+html {
+  background-color: black;
+}
 
 html,
 body {
@@ -26,5 +35,10 @@ a {
   text-decoration: none;
 }
 
-.bright{ text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.8em white; }
-.bright input { text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.8em white; }
+.bright {
+  text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.8em white;
+}
+
+.bright input {
+  text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.8em white;
+}

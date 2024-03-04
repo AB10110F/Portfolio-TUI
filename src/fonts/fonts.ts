@@ -8,9 +8,9 @@ const vt323 = VT323({
   variable: '--vt323',
 })
 
-const dotFont = localFont({ 
+const dotFont = localFont({
   src: '../app/e-dot-digital-7.ttf',
-  variable: '--dotFont', 
+  variable: '--dotFont',
 })
- 
+
 export { vt323, dotFont }

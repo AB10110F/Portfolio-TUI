@@ -1,14 +1,14 @@
 import '@/css/globals.css';
 import Dots from '@/components/Dots';
 import Marquee from '@/components/Marquee';
-import {Metadata} from 'next';
+import { Metadata } from 'next';
 import { LanguageContextProvider } from './context/language'
 import Favicon from './favicon.png';
 
 export const metadata: Metadata = {
   title: 'AB10110F',
   description: 'Portfolio',
-  keywords: ['portfolio','developer','web developer', 'next.js'],
+  keywords: ['portfolio', 'developer', 'web developer', 'next.js'],
   icons: [
     { rel: 'icon', url: Favicon.src, }
   ],
@@ -27,8 +27,8 @@ export default function RootLayout({
     <html lang="en" translate='no'>
       <body>
         <LanguageContextProvider>
-          <Marquee/>
-          <Dots/>
+          <Marquee />
+          <Dots />
           {children}
         </LanguageContextProvider>
       </body>
