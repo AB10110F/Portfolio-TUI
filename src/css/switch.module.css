@@ -103,7 +103,7 @@
 @media only screen and (max-width: 1250px) and (min-width: 760px) {
   .container {
     width: 50%;
-    font-size: 2vh;
+    font-size: 2svh;
   }
 
   .languageSwitchContainer {
@@ -115,7 +115,7 @@
 
   .section {
     width: 50%;
-    font-size: 2vh;
+    font-size: 2svh;
     justify-content: center;
   }
 }
@@ -123,11 +123,11 @@
 @media only screen and (max-width: 760px) {
   .container {
     width: 50%;
-    font-size: 3.2vh;
+    font-size: 3.2svh;
   }
 
   .section {
     width: 65%;
-    font-size: 3.2vh;
+    font-size: 3.2svh;
   }
 }

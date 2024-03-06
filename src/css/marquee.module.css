@@ -24,21 +24,21 @@
 
 @media only screen and (max-width: 1250px) and (min-width: 760px) {
   .header {
-    height: 12vh;
+    height: 12svh;
   }
 
   .header>h1 {
-    font-size: 7vh;
+    font-size: 7svh;
   }
 }
 
 @media only screen and (max-width: 760px) {
   .header {
-    height: 11vh;
+    height: 11svh;
   }
 
   .header>h1 {
-    font-size: 5vh;
+    font-size: 5svh;
     text-align: center;
   }
 }
