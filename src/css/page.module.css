@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   color: white;
-  padding: 30px 30px 25px 30px;
+  padding: 25px 25px 25px 25px;
 }
 
 .grid {
@@ -24,7 +24,7 @@
 .languageContainer {
   display: flex;
   flex-direction: row;
-  border: 2px solid rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
   height: 40%;
   animation: right 1s ease;
 }
@@ -35,7 +35,7 @@
 }
 
 .bars {
-  border: 2px solid rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
   height: 40%;
   animation: right 1.5s ease;
   display: flex;
@@ -44,7 +44,7 @@
 }
 
 .crtSwitch {
-  border: 2px solid rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
   height: 20%;
   display: flex;
   justify-content: center;

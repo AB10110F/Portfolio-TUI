@@ -25,8 +25,8 @@
 }
 
 .checkbox {
-  width: 2.3em;
-  height: 2.3em;
+  width: 1em;
+  height: 1em;
   background-color: none;
   border-radius: 50%;
   vertical-align: middle;
@@ -89,12 +89,12 @@
 }
 
 .scanner {
-  animation: scanning 2s infinite linear;
+  animation: scanning 1s infinite linear;
   background-color: rgba(133, 133, 133, 0.266);
   position: fixed;
   top: 0;
   left: 0;
-  height: 5%;
+  height: 2%;
   width: 100%;
 }
 
