@@ -1,6 +1,6 @@
 'use client';
 import { useLanguageContext } from '../app/context/language';
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 import styles from '../css/marquee.module.css';
 import { dotFont } from '../fonts/fonts';
 import dynamic from "next/dynamic";
@@ -11,11 +11,18 @@ const Marquee = () => {
 
   if (language == 'English') {
     quotes = [
+      "...And the Horse You Rode In On",
+      "A Whisper in the Storm",
+      "It Followed Me Home",
+      "Too Close to the Sun",
+      "I Should Have Become A Watchmaker",
+      "Burried and Forgotten",
       "Just Dust and Echoes",
       "Were it so easy",
       "Slipspace rupture detected",
       "She's been expecting you",
       "Last time you asked me \"If it were my choice, would I do it?\"",
+      "This is not your grave... but you are welcome in it",
       "I...? I... am a monument... to all your sins",
       "Lies for the weak! Beacons for the deluded!",
       "Child of my enemy, why have you come? I offer no forgiveness, a father's sins, passed to his son",
@@ -27,7 +34,7 @@ const Marquee = () => {
       "Ah, you ignorant slaves. Finally taken notice, have you?",
       "Let them grant death",
       "I may be but small, but I will die a colossus",
-      "Return from whence thou cam'st For that is thy place of belonging",
+      "Return from whence thou cam'st. For that is thy place of belonging",
       "ACHTUNG, ACHTUNG",
       "Things have learnt to walk which ought to crawl",
       "I wear no mask",
@@ -35,7 +42,8 @@ const Marquee = () => {
       "Are you still looking for answers where there are only questions?",
       "THIS GOD WON'T FORGIVE YOU",
       "She'll never dance with us again",
-      "Fear Sells",
+      "Midnight Sun",
+      "The Battle of Heaven and Earth",
       "Fear brought me this far",
       "Monsters that Speak",
       "I curse you forever in name. I bless you forever in death",
@@ -43,16 +51,24 @@ const Marquee = () => {
       "Not while their voices still echo... Not while your silence still endures...",
       "All hope abandon, ye who enter here",
       "The devil is not as black as he is painted",
+      "Him who eats time, him robes; it's a wind of invisible voices. Rejoice, death is not the end",
       "2 8 6 9 9 5 6 8 7 9",
     ]
   }
   else if (language == 'Spanish') {
     quotes = [
+      "...Y el caballo en el que llegaste",
+      "Un susurro en la tormenta",
+      "Me siguió a casa",
+      "Demasiado cerca del Sol",
+      "Debí haber sido un relojero",
+      "Enterrado y olvidado",
       "Solo Polvo y Ecos",
       "Si fuese tan fácil",
       "Brecha desliespacial detectada",
       "Los ha estado esperando",
       "La última vez me preguntaste \"¿Lo haría, si fuese mi decisión?\"",
+      "Esta no es tu tumba... pero eres bienvenido en ella",
       "¿Yo...? Yo... soy un monumento... a todos tus pecados",
       "¡Mentiras para los débiles! ¡Faros para los desorientados!",
       "Hijo de mi enemigo, ¿Por qué viniste? No ofrezco perdón, los pecados del padre pasan a su hijo",
@@ -72,7 +88,8 @@ const Marquee = () => {
       "¿Sigues buscando respuestas donde solo llacen preguntas?",
       "ESTE DIOS NO TE VA A PERDONAR",
       "Ella nunca volverá a bailar con nosotros",
-      "El miedo vende",
+      "Sol de medianoche",
+      "La batalla del cielo y la tierra",
       "El miedo me ha traído hasta aqui",
       "Monstruos que hablan",
       "Por siempre os maldigo en el nombre. Por siempre os bendigo en la muerte",
@@ -80,26 +97,37 @@ const Marquee = () => {
       "No mientras sus voces retumben... No mientras tu silencio perdure",
       "Abandonad toda esperanza, quienes aquí entráis",
       "El diablo no es tan negro como lo pintan",
+      "El que debora el tiempo, su túnica es un viento de voces invisible. Regocíjense, la muerte no es el final",
       "2 8 6 9 9 5 6 8 7 9",
     ]
   }
 
   let index = Math.floor(Math.random() * quotes.length);
   const initialQuote = quotes[index];
-  const [text, setText] = useState(initialQuote);
+  const [quote, setQuote] = useState(initialQuote);
   const [length, setLength] = useState((initialQuote.length * 0.5).toString());
+  const [checkQuotes, setCheckQuotes] = useState<string[]>([initialQuote])
 
   return (
     <>
       <header className={styles.header} style={{ '--transition-duration': length + 's' } as React.CSSProperties}>
         <h1
-          key={text}
+          key={quote}
           style={dotFont.style}
           onAnimationIteration={() => {
-            index = Math.floor(Math.random() * quotes.length);
-            setText(quotes[index]);
-            setLength((quotes[index].length * 0.5).toString());
-          }} >{text}</h1>
+            setCheckQuotes(prev => {
+              const current = prev.length == quotes.length ? [prev[prev.length - 1]] : prev;
+
+              while (current.includes(quotes[index])) {
+                index = Math.floor(Math.random() * quotes.length);
+              }
+
+              setQuote(quotes[index]);
+              setLength((quotes[index].length * 0.5).toString());
+              return [...current, quotes[index]];
+            });
+
+          }} >{quote}</h1>
       </header>
     </>
   );
