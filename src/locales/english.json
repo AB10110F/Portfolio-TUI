@@ -1,0 +1,116 @@
+{
+  "enButton": "ENGLISH",
+  "esButton": "SPANISH",
+  "crtButton": "CRT EFFECT",
+
+  "banner": [
+    "           ,db                                                                     ",
+    "           jSDl,                                                                   ",
+    "           DEMP\".                                                                 ",
+    "           'YLObP                      Name: Bryant Hernández                      ",
+    "             `YN`                      Mail: bryant.0@outlook.com                  ",
+    "               Y\"                                                                 ",
+    "                Y;                     You can also check my social media          ",
+    "               ,Lb  .,,. ,,ss          just type one of the following options:     ",
+    "            .,dOVEl SDEMILO'                                                       ",
+    "           dLOVENUSDEMILOP                                                         ",
+    "          ;OP*NUSDP**LOVEb,            =^..^= github        </>   codepen          ",
+    "          dEl \"DE;   YENUP                                                        ",
+    "          YUS :l`     YS'              (°‿°) reddit       ,(u°)> twitter           ",
+    "          :*'       .,DE.                                                          ",
+    "                  USD`YI                                                           ",
+    "                 dDEY  O:              ║▌║█║▌│║▌║▌█║▌║█║▌│║▌║▌█║▌║                 ",
+    "                .EMIb ,E.                                                          ",
+    "               ,dILO* NUY                                                          ",
+    "              ,ILOVb ,SD'              Type \"help\" to view the available commands\n",
+    ""
+  ],
+
+  "help": [
+    "This is the list of commands you can use: \n",
+    "banner          Displays the initial greeting",
+    "help            As you can see, it shows a list of commands",
+    "skills          Displays the technologies I'm able to use",
+    "github          Opens github in a new tab",
+    "codepen         Opens codepen in a new tab",
+    "reddit          Opens reddit in a new tab",
+    "twitter         Opens twitter in a new tab",
+    "cls             Clears the content of the terminal\n\n"
+  ],
+
+  "skills":[
+    "Frontend        TypeScript, React.js, CSS, Tailwind CSS, p5.js",
+    "Backend         PHP (Laravel), Django, MySQL",
+    "Tools           Git, Nushell, Neovim, Typst\n\n"
+  ],
+
+  "smallBanner": [
+    "Name: Bryant Hernández",
+    "Mail: bryant.0@outlook.com",
+    "",
+    "Type \"help\" to view the available commands\n\n"
+  ],
+
+  "smallHelp": [
+    "This is the list of commands you can use: \n",
+    "banner: Displays the initial greeting\n",
+    "help: As you can see, it shows a list of commands\n",
+    "skills: Displays the technologies I'm able to use\n",
+    "github: Opens github in a new tab\n",
+    "codepen: Opens codepen in a new tab\n",
+    "reddit: Opens reddit in a new tab\n",
+    "twitter: Opens twitter in a new tab\n",
+    "cls: Clears the content of the terminal\n\n"
+  ],
+
+  "smallSkills":[
+    "Frontend: TypeScript, React.js, CSS, Tailwind CSS, p5.js\n",
+    "Backend: PHP (Laravel), Django, MySQL\n",
+    "Tools: Git, Nushell, Neovim, Typst\n\n"
+  ],
+
+  "quotes": [
+    "...And the Horse You Rode In On",
+    "A Whisper in the Storm",
+    "It Followed Me Home",
+    "Too Close to the Sun",
+    "I Should Have Become A Watchmaker",
+    "Burried and Forgotten",
+    "Just Dust and Echoes",
+    "Were it so easy",
+    "Slipspace rupture detected",
+    "She's been expecting you",
+    "Last time you asked me \"If it were my choice, would I do it?\"",
+    "This is not your grave... but you are welcome in it",
+    "I...? I... am a monument... to all your sins",
+    "Lies for the weak! Beacons for the deluded!",
+    "Child of my enemy, why have you come? I offer no forgiveness, a father's sins, passed to his son",
+    "If only there were a god to pray to",
+    "This is a land of monstrosities and I am no exception",
+    "Can't even die right",
+    "Fear not the dark my friend. And let the feast begin",
+    "What, still here?",
+    "Ah, you ignorant slaves. Finally taken notice, have you?",
+    "Let them grant death",
+    "I may be but small, but I will die a colossus",
+    "Return from whence thou cam'st. For that is thy place of belonging",
+    "ACHTUNG, ACHTUNG",
+    "Things have learnt to walk which ought to crawl",
+    "I wear no mask",
+    "None of us are here by choice",
+    "Are you still looking for answers where there are only questions?",
+    "THIS GOD WON'T FORGIVE YOU",
+    "She'll never dance with us again",
+    "Midnight Sun",
+    "The Battle of Heaven and Earth",
+    "Fear brought me this far",
+    "Monsters that Speak",
+    "I curse you forever in name. I bless you forever in death",
+    "And thus shall your name be erased under the heavens",
+    "Not while their voices still echo... Not while your silence still endures...",
+    "All hope abandon, ye who enter here",
+    "The devil is not as black as he is painted",
+    "Him who eats time, him robes; it's a wind of invisible voices. Rejoice, death is not the end",
+    "2 8 6 9 9 5 6 8 7 9"
+  ]
+}

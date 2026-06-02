@@ -2,7 +2,7 @@ import '@/css/globals.css';
 import Dots from '@/components/Dots';
 import Marquee from '@/components/Marquee';
 import { Metadata } from 'next';
-import { LanguageContextProvider } from './context/language'
+import { LanguageContextProvider } from './context/LanguageContext'
 import Favicon from './favicon.png';
 
 export const metadata: Metadata = {

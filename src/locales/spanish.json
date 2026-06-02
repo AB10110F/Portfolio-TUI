@@ -1,0 +1,116 @@
+{
+  "enButton": "INGLÉS",
+  "esButton": "ESPAÑOL",
+  "crtButton": "EFECTO CRT",
+
+  "banner": [
+    "           ,db                                                                     ",
+    "           jSDl,                                                                   ",
+    "           DEMP\".                                                                 ",
+    "           'YLObP                      Nombre: Bryant Hernández                    ",
+    "             `YN`                      Correo: bryant.0@outlook.com                ",
+    "               Y\"                                                                 ",
+    "                Y;                     También puedes encontrarme en mis redes     ",
+    "               ,Lb  .,,. ,,ss          tecleando unas de las siguientes opciones:  ",
+    "            .,dOVEl SDEMILO'                                                       ",
+    "           dLOVENUSDEMILOP                                                         ",
+    "          ;OP*NUSDP**LOVEb,            =^..^= github        </>   codepen          ",
+    "          dEl \"DE;   YENUP                                                        ",
+    "          YUS :l`     YS'              (°‿°) reddit       ,(u°)> twitter           ",
+    "          :*'       .,DE.                                                          ",
+    "                  USD`YI                                                           ",
+    "                 dDEY  O:              ║▌║█║▌│║▌║▌█║▌║█║▌│║▌║▌█║▌║                 ",
+    "                .EMIb ,E.                                                          ",
+    "               ,dILO* NUY                                                          ",
+    "              ,ILOVb ,SD'              Teclea \"help\" para ver los comandos disponibles\n",
+    ""
+  ],
+
+  "help": [
+    "Esta es la lista de comandos que puedes usar: \n",
+    "banner          Despliega el saludo inicial",
+    "help            Como puedes ver, muestra una lista de comandos",
+    "skills          Muestra las tecnologías que puedo usar",
+    "github          Abre github en una nueva pestaña",
+    "codepen         Abre codepen en una nueva pestaña",
+    "reddit          Abre reddit en una nueva pestaña",
+    "twitter         Abre twitter en una nueva pestaña",
+    "cls             Borra el contenido de la terminal\n\n"
+  ],
+
+  "skills":[
+    "Frontend        TypeScript, React.js, CSS, Tailwind CSS, p5.js",
+    "Backend         PHP (Laravel), Django, MySQL",
+    "Herramientas    Git, Nushell, Neovim, Typst\n\n"
+  ],
+
+  "smallBanner": [
+    "Nombre: Bryant Hernández",
+    "Correo: bryant.0@outlook.com",
+    "",
+    "Teclea \"help\" para ver los comandos disponibles\n\n"
+  ],
+
+  "smallHelp": [
+    "Esta es la lista de comandos que puedes usar: \n",
+    "banner: Despliega el saludo inicial\n",
+    "help: Como puedes ver, muestra una lista de comandos\n",
+    "skills: Muestra las tecnologías que puedo usar\n",
+    "github: Abre github en una nueva pestaña\n",
+    "codepen: Abre codepen en una nueva pestaña\n",
+    "reddit: Abre reddit en una nueva pestaña\n",
+    "twitter: Abre twitter en una nueva pestaña\n",
+    "cls: Borra el contenido de la terminal\n\n"
+  ],
+
+  "smallSkills":[
+    "Frontend: TypeScript, React.js, CSS, Tailwind CSS, p5.js\n",
+    "Backend: PHP (Laravel), Django, MySQL\n",
+    "Herramientas: Git, Nushell, Neovim, Typst\n\n"
+  ],
+
+  "quotes": [
+    "...Y el caballo en el que llegaste",
+    "Un susurro en la tormenta",
+    "Me siguió a casa",
+    "Demasiado cerca del Sol",
+    "Debí haber sido un relojero",
+    "Enterrado y olvidado",
+    "Solo Polvo y Ecos",
+    "Si fuese tan fácil",
+    "Brecha desliespacial detectada",
+    "Los ha estado esperando",
+    "La última vez me preguntaste \"¿Lo haría, si fuese mi decisión?\"",
+    "Esta no es tu tumba... pero eres bienvenido en ella",
+    "¿Yo...? Yo... soy un monumento... a todos tus pecados",
+    "¡Mentiras para los débiles! ¡Faros para los desorientados!",
+    "Hijo de mi enemigo, ¿Por qué viniste? No ofrezco perdón, los pecados del padre pasan a su hijo",
+    "Si tan solo hubiese un dios al cual rezar",
+    "Esta es una tierra de monstruosidades y yo no soy la excepción",
+    "Ni siquiera puedo morir bien",
+    "No temas a la obscuridad mi amigo, y demos comienzo al festín",
+    "¿Qué, aún aqui?",
+    "Ah, esclavos ignorantes. Por fin se dieron cuenta ¿no?",
+    "Que conceda la muerte",
+    "Puede que sea pequeño, pero moriré como un coloso",
+    "Vuelve al lugar de donde viniste, pues ese es el lugar al que perteneces",
+    "ACHTUNG, ACHTUNG",
+    "Cosas han aprendido a caminar, cosas que deberían arrastrarse",
+    "No porto ninguna mascara",
+    "Ninguno de nosotros esta aquí por voluntad",
+    "¿Sigues buscando respuestas donde solo llacen preguntas?",
+    "ESTE DIOS NO TE VA A PERDONAR",
+    "Ella nunca volverá a bailar con nosotros",
+    "Sol de medianoche",
+    "La batalla del cielo y la tierra",
+    "El miedo me ha traído hasta aqui",
+    "Monstruos que hablan",
+    "Por siempre os maldigo en el nombre. Por siempre os bendigo en la muerte",
+    "Y así sea borrado vuestro nombre bajo los cielos",
+    "No mientras sus voces retumben... No mientras tu silencio perdure",
+    "Abandonad toda esperanza, quienes aquí entráis",
+    "El diablo no es tan negro como lo pintan",
+    "El que debora el tiempo, su túnica es un viento de voces invisible. Regocíjense, la muerte no es el final",
+    "2 8 6 9 9 5 6 8 7 9"
+  ]
+}

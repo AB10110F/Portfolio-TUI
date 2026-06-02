@@ -1,22 +1,10 @@
 import styles from '../css/switch.module.css'
 import { vt323 } from '../fonts/fonts';
-import { useLanguageContext } from '../app/context/language';
+import { useLanguageContext } from '../app/context/LanguageContext';
 import dynamic from "next/dynamic";
 
 const LanguageSwitch = () => {
-  const { language, setLanguage } = useLanguageContext();
-
-  let l1: string = '';
-  let l2: string = '';
-
-  if (language == 'English') {
-    l1 = 'ENGLISH'
-    l2 = 'SPANISH'
-  }
-  else if (language == 'Spanish') {
-    l1 = 'INGLÉS'
-    l2 = 'ESPAÑOL'
-  }
+  const { t, language, setLanguage } = useLanguageContext();
 
   const changeState = (language: string) => {
     setLanguage(language);
@@ -33,7 +21,7 @@ const LanguageSwitch = () => {
           checked={language == 'English'}
           onChange={() => changeState('English')}
         />
-        <label style={vt323.style} htmlFor="english" >{l1}</label>
+        <label style={vt323.style} htmlFor="english" >{t("enButton")}</label>
       </section>
       <section className={styles.section}>
         <input
@@ -44,12 +32,11 @@ const LanguageSwitch = () => {
           checked={language == 'Spanish'}
           onChange={() => changeState('Spanish')}
         />
-        <label style={vt323.style} htmlFor="spanish" >{l2}</label>
+        <label style={vt323.style} htmlFor="spanish" >{t("esButton")}</label>
       </section>
     </section>
   )
 };
 
 export default dynamic(() => Promise.resolve(LanguageSwitch), { ssr: false })
-
 /* export default LanguageSwitch; */
