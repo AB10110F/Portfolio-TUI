@@ -6,20 +6,16 @@ import dynamic from "next/dynamic";
 const LanguageSwitch = () => {
   const { t, language, setLanguage } = useLanguageContext();
 
-  const changeState = (language: string) => {
-    setLanguage(language);
-  };
-
   return (
     <section className={styles.languageSwitchContainer}>
       <section className={styles.section}>
         <input
           className={styles.checkbox}
           type="radio"
-          name='language'
+          name="language"
           id="english"
-          checked={language == 'English'}
-          onChange={() => changeState('English')}
+          checked={language == "English"}
+          onChange={() => setLanguage("English")}
         />
         <label style={vt323.style} htmlFor="english" >{t("enButton")}</label>
       </section>
@@ -27,10 +23,10 @@ const LanguageSwitch = () => {
         <input
           className={styles.checkbox}
           type="radio"
-          id='spanish'
-          name='language'
-          checked={language == 'Spanish'}
-          onChange={() => changeState('Spanish')}
+          id="spanish"
+          name="language"
+          checked={language == "Spanish"}
+          onChange={() => setLanguage("Spanish")}
         />
         <label style={vt323.style} htmlFor="spanish" >{t("esButton")}</label>
       </section>
