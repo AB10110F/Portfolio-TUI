@@ -5,14 +5,25 @@
   border: 0;
 }
 
+@-moz-document url-prefix() {
+  * {
+    scrollbar-color: #ffffff #00000000;
+    scrollbar-width: thin;
+  }
+}
+
 ::-webkit-scrollbar {
-  height: 10px;
-  width: 10px;
+  height: 5px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #fdfdfd;
+  background: #ffffff;
   border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
 }
 
 ::selection {
