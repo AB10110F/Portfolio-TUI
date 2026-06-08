@@ -3,6 +3,10 @@
   "esButton": "SPANISH",
   "crtButton": "CRT EFFECT",
 
+  "opening": "Opening",
+  "errPart1": "x_x Syntax Error",
+  "errPart2": "is not a command",
+
   "banner": [
     "           ,db",
     "           jSDl,",
