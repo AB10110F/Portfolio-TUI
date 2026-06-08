@@ -3,6 +3,7 @@ import Dots from '@/components/Dots';
 import Marquee from '@/components/Marquee';
 import { Metadata } from 'next';
 import { LanguageContextProvider } from './context/LanguageContext'
+import { CrtContextProvider } from './context/CrtContext';
 import Favicon from './favicon.png';
 
 export const metadata: Metadata = {
@@ -27,9 +28,11 @@ export default function RootLayout({
     <html lang="en" translate='no'>
       <body>
         <LanguageContextProvider>
-          <Marquee />
-          <Dots />
-          {children}
+          <CrtContextProvider>
+            <Marquee />
+            <Dots />
+            {children}
+          </CrtContextProvider>
         </LanguageContextProvider>
       </body>
     </html>

@@ -3,10 +3,12 @@ import { useState, useRef, useEffect } from 'react';
 import { useLanguageContext } from '../app/context/LanguageContext';
 import styles from '../css/terminal.module.css'
 import { vt323 } from '../fonts/fonts'
+import { useCrtContext } from '@/app/context/CrtContext';
 
 const Terminal = () => {
 
   const { tArray, language } = useLanguageContext();
+  const { crt } = useCrtContext();
   const divRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null!);
   const [input, setInput] = useState("");
@@ -112,7 +114,7 @@ const Terminal = () => {
   };
 
   return (
-    <div ref={divRef} className={styles.terminal}>
+    <div ref={divRef} className={`${styles.terminal} ${crt ? "bright__border" : ""}`} onClick={() => inputRef.current.focus()}>
       <pre style={vt323.style} className={styles.terminal__history}>
         {output}{slicedText}
       </pre>
